@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="How the original C++ Airgead investment calculator was rebuilt as a static browser application.">
+  <title>From C++ to an Interactive Browser Demo | Airgead</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="site-shell" data-shell>
+    <main class="site-main">
+      <header class="wrap page-head content-page">
+        <div class="eyebrow">Project Development</div>
+        <h1>Turning C++ investment logic into an interactive browser demo.</h1>
+        <p class="lead">I kept the original calculation model at the center of the project while rebuilding the experience for direct use in a browser.</p>
+        <div class="article-meta"><span>By Alysha Pursley</span><span>7-minute read</span></div>
+      </header>
+      <section class="wrap section content-page" style="padding-top:0">
+        <article class="card article-body">
+          <p>The original Airgead project was a C++ console application designed to demonstrate compound investment growth. It collected an initial investment, monthly deposit, annual interest rate, and number of years. It then generated reports showing year-end balances and earned interest with and without additional deposits.</p>
+
+          <p>That version established the calculation logic, but a console interface limits how easily the project can be explored in a portfolio. Visitors would need to download the source, compile it, and run it locally. I rebuilt the project as a static browser application so the same core idea could be tested immediately while keeping the original C++ files available for review.</p>
+
+          <h2>Preserving the original purpose</h2>
+
+          <p>The goal was not to replace the project with an unrelated finance dashboard. The original purpose was educational: help users understand investing, recurring contributions, and compound interest through an interactive system. The browser version keeps that focus.</p>
+
+          <p>The calculator still uses the same four primary inputs. It still compares growth with and without monthly deposits. It also keeps the year-by-year reporting model instead of reducing the entire experience to one final number.</p>
+
+          <h2>Separating the application into focused files</h2>
+
+          <p>I organized the static version into individual HTML pages, shared CSS, reusable JavaScript modules, page-specific scripts, and static assets. This makes the project easier to understand and update without introducing a framework or build process.</p>
+
+          <ul>
+            <li><strong>HTML pages</strong> contain the content and structure for the landing page, calculator, results, comparison tool, saved plans, articles, and supporting project pages.</li>
+            <li><strong>The shared shell module</strong> generates the consistent header, navigation, mobile menu, footer, and toast notification container.</li>
+            <li><strong>The calculator library</strong> owns the compound-growth calculations, currency formatting, local storage helpers, and CSV export behavior.</li>
+            <li><strong>The chart library</strong> draws the growth and comparison charts directly on HTML canvas elements.</li>
+            <li><strong>Page scripts</strong> connect each interface to only the behavior it needs.</li>
+          </ul>
+
+          <p>This separation keeps the calculation logic reusable. The calculator page, results page, and comparison page all depend on the same function instead of maintaining separate versions of the formula.</p>
+
+          <h2>Translating the calculation into JavaScript</h2>
+
+          <p>The browser calculation begins by converting each input to a number and preventing negative values. The annual percentage rate is divided by 100 and by 12 to produce the monthly rate. Two balances are then tracked through the selected number of years.</p>
+
+          <p>During each month, the deposit scenario earns interest and receives the monthly contribution. The no-deposit scenario earns interest without receiving additional principal. At the end of each year, the application records both balances, the total amount deposited, and the interest earned by the deposit scenario.</p>
+
+          <div class="callout"><strong>One calculation function supports the entire demo.</strong><br>Using the same function everywhere prevents the main calculator and comparison page from producing conflicting results.</div>
+
+          <h2>Adding useful browser-only features</h2>
+
+          <p>The static version adds several features that make sense in a browser while remaining honest about the absence of a backend. Current calculations and saved plans use <code>localStorage</code>, so the data remains in the user’s browser. The mock sign-in does not create an account or transmit credentials. Its interface is clearly labeled as demo behavior.</p>
+
+          <p>The results can also be exported as CSV. JavaScript builds the file from the same year-by-year data displayed on the page, creates a temporary browser download, and releases the temporary object URL afterward. No server is required to generate the export.</p>
+
+          <p>The charts are drawn with the Canvas API rather than an external charting package. This keeps the project lightweight and gives me direct control over the colors, labels, principal segments, and interest segments used in the visualizations.</p>
+
+          <h2>Designing for more than one screen size</h2>
+
+          <p>A working calculation is only part of a usable browser application. The interface also needs to remain readable on phones, tablets, laptops, and larger monitors. I used fluid content wrappers, responsive grids, flexible form controls, scalable headings, and mobile navigation to prevent the desktop layout from simply shrinking until it becomes unusable.</p>
+
+          <p>The results page required particular attention because it combines large currency values, a chart, summary cards, action buttons, and a wide data table. The page remains within the viewport at small widths. When the table cannot display every column at a readable size, horizontal scrolling is limited to the table’s own container instead of forcing the entire webpage past 100% width.</p>
+
+          <h2>Keeping the project static and deployable</h2>
+
+          <p>The finished demo uses only HTML, CSS, JavaScript, images, and the original C++ source files. There is no package installation, compilation step, database, or server route. It can be deployed directly through GitHub Pages or opened from a simple local web server.</p>
+
+          <p>Using JavaScript modules means the project should be served rather than opened through a <code>file://</code> URL. A lightweight local server is enough during development. Once published, GitHub Pages handles those module requests normally.</p>
+
+          <h2>What the rebuild demonstrates</h2>
+
+          <p>The browser version demonstrates more than a visual redesign. It shows how existing application logic can be preserved while the delivery method changes. The C++ files document the original object-oriented implementation. The static site makes the same concept accessible as an interactive portfolio project.</p>
+
+          <p>Most importantly, the rebuild still supports the original educational goal. Users can adjust the inputs, compare scenarios, inspect exact yearly values, and see how recurring contributions affect long-term growth. The interface makes the calculation easier to explore without hiding how the result is produced.</p>
+
+          <nav class="article-nav" aria-label="Article navigation">
+            <a class="btn btn-ghost" href="articles.html">← All Articles</a>
+            <a class="btn btn-primary" href="case-study.html">View Case Study →</a>
+          </nav>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="../js/components/shell.js"></script>
+</body>
+</html>
