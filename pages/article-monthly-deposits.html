@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="An explanation of how recurring monthly deposits change compound investment growth over time.">
+  <meta name="description" content="A clear explanation of how recurring monthly deposits affect principal, compound interest, and long-term investment growth.">
   <title>What Monthly Deposits Actually Change | Airgead</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -13,67 +13,91 @@
       <header class="wrap page-head content-page">
         <div class="eyebrow">Compound Interest</div>
         <h1>What monthly deposits actually change.</h1>
-        <p class="lead">Compound interest matters, but the amount contributed along the way can matter just as much. Looking at both scenarios together makes that difference easier to understand.</p>
+        <p class="lead">Compound interest matters, but the amount contributed along the way can matter just as much. Comparing both scenarios makes the difference easier to understand.</p>
         <div class="article-meta"><span>By Alysha Pursley</span><span>8-minute read</span></div>
       </header>
       <section class="wrap section content-page" style="padding-top:0">
         <article class="card article-body">
-          <p>When people first learn about compound interest, the explanation usually focuses on money earning interest and then earning additional interest on the interest that has already accumulated. That definition is accurate, but it can still feel abstract. A percentage and a distant future balance do not always show what is happening between the starting point and the final result.</p>
+          <p>What could happen if you regularly added a small amount to your savings instead of relying only on the money already there? The answer is more than a larger pile of deposits. Each new contribution can also begin earning interest, which changes how the account grows over time.</p>
 
-          <p>The Airgead Investment Calculator addresses that problem by running two projections at the same time. The first allows the initial balance to grow without any additional deposits. The second uses the same starting balance, interest rate, and timeframe but adds a recurring monthly contribution. Comparing those projections makes it possible to separate passive account growth from the effect of consistent saving.</p>
+          <p>Compound interest means that money earns interest on the original balance and on interest that has already accumulated. The Airgead Investment Calculator makes that process easier to see by running two projections at once. One leaves the starting balance untouched. The other uses the same starting balance, rate, and timeframe but includes a monthly deposit.</p>
+
+          <p>Looking at both paths together helps answer a practical question: how much of the difference comes from regularly adding money, and how much comes from the growth earned on those contributions?</p>
 
           <h2>One starting point, two different paths</h2>
 
-          <p>Both scenarios begin with the same initial investment. They also use the same annual interest rate and the same number of years. The only difference is whether a monthly deposit is added. Because the remaining inputs stay consistent, the final comparison isolates the effect of recurring contributions instead of mixing several changes together.</p>
+          <p>Both projections begin with the same initial investment. They also use the same annual rate and the same number of years. The key difference is whether a monthly deposit is included.</p>
 
-          <p>The scenario without deposits answers a basic question: what happens if the original amount is left alone to grow? The deposit scenario answers a different question: what happens when the account continues receiving new principal every month? The distance between those two balances grows over time because each contribution affects the account in two ways. It directly increases the principal, and it creates another amount that can earn interest during the remaining months and years.</p>
+          <div class="grid-2" style="margin:28px auto;max-width:72ch">
+            <div class="callout"><strong>Without monthly deposits</strong><br>The original balance grows only through the interest it earns.</div>
+            <div class="callout"><strong>With monthly deposits</strong><br>The balance receives new principal every month, and those contributions can earn interest too.</div>
+          </div>
+
+          <p>What if the initial investment is left untouched? In that scenario, growth comes only from interest. Now imagine adding money every month. Each contribution immediately increases the principal and then has time to earn interest during the rest of the projection. Over several years, the distance between those balances can become substantial.</p>
 
           <div class="callout"><strong>The difference is not created by interest alone.</strong><br>The larger balance includes the money contributed each month plus the growth earned on those contributions.</div>
 
-          <h2>Why timing affects the result</h2>
+          <h2>Why contribution timing matters</h2>
 
-          <p>A deposit made early in a projection has more time to earn interest than one made near the end. That does not make later deposits unimportant. It means each contribution has a different amount of time to participate in the compounding process.</p>
+          <p>A contribution made near the beginning of a projection has more time to grow than one made during the final year. Later deposits still increase the balance, but they have fewer monthly compounding periods available.</p>
 
-          <p>Airgead calculates growth in monthly steps. The annual rate is converted to a monthly rate by dividing it by 100 and then by 12. During each month, the current balance earns interest before the recurring deposit is added. Repeating that process twelve times produces the year-end balance shown in the results table.</p>
+          <p>Airgead handles this in monthly steps. It divides the annual percentage rate by 100 and then by 12 to produce a monthly decimal rate. The calculator applies that rate to the current balance before adding the new monthly deposit. It repeats the process twelve times to produce each year-end result.</p>
 
-          <p>This monthly model is especially useful for an educational calculator because it follows the same rhythm as many real household budgets. Income, bills, and savings contributions are often managed monthly. The interface connects that familiar schedule to a longer-term projection without asking the user to work through the formula manually.</p>
+          <p>That sounds technical, but the basic idea is simple:</p>
 
-          <h2>Principal and interest need to be viewed separately</h2>
+          <ol>
+            <li>The existing balance earns one month of interest.</li>
+            <li>The monthly contribution is added.</li>
+            <li>The new balance moves into the next month.</li>
+            <li>The cycle repeats throughout the selected timeframe.</li>
+          </ol>
 
-          <p>A large final balance can look impressive, but it does not explain how much of the total came from contributions and how much came from investment growth. For that reason, the results page reports total principal and earned interest separately.</p>
+          <p>This monthly schedule is useful because many people already manage income, bills, and savings that way. The calculator connects a familiar monthly contribution to a long-term result without requiring the user to calculate every step manually.</p>
 
-          <p>Total principal includes the original balance and every monthly deposit added during the selected timeframe. Earned interest is calculated by subtracting that principal from the final balance with deposits. This distinction prevents the projection from presenting all growth as if it came from interest.</p>
+          <h2>Understanding principal and interest separately</h2>
 
-          <p>For example, increasing a monthly contribution may cause the final balance to rise sharply. Part of that increase is simply the additional money deposited. The rest is the interest those deposits had time to earn. Seeing both values helps the user interpret the result accurately.</p>
+          <p>A large final balance does not tell the whole story. To interpret the result correctly, it is important to know how much came from personal contributions and how much came from investment growth. That is why the Results page reports total principal and earned interest separately.</p>
 
-          <h2>Consistency can be explored without pretending every situation is the same</h2>
+          <p>Principal includes the initial investment plus every monthly contribution. Earned interest is the portion remaining after that principal is subtracted from the final balance. Separating the two values shows whether most of the projected balance came from deposits or from compound growth.</p>
 
-          <p>The calculator demonstrates a mathematical relationship; it does not decide what a person should contribute. A monthly deposit that is realistic for one household may be impossible for another. The purpose of changing the deposit field is not to create a universal target. It is to let users test amounts that make sense for their own hypothetical scenario.</p>
-
-          <p>The comparison tool expands that idea by placing two plans side by side. A user can change the monthly deposit, rate, or timeframe and see how the final balances differ. This makes several useful questions easier to explore:</p>
+          <p>Consider a simple hypothetical example. Someone starts with $1,000 and deposits $100 per month for one year. Before considering interest, the total principal at the end of that year is $2,200:</p>
 
           <ul>
-            <li>How much does a smaller contribution change the result over a longer period?</li>
-            <li>What happens when the contribution increases but the timeframe stays the same?</li>
-            <li>How does the same monthly deposit perform under two different assumed rates?</li>
-            <li>How much of each final balance is principal, and how much is earned interest?</li>
+            <li>$1,000 initial investment</li>
+            <li>$1,200 contributed through twelve monthly deposits</li>
+            <li>$2,200 total principal</li>
           </ul>
 
-          <p>These are not predictions or guarantees. They are controlled comparisons based on the values entered into the calculator. Keeping that limitation clear is important because an assumed interest rate does not represent every fee, tax, market change, or real-world account condition.</p>
+          <p>If the final projected balance is higher than $2,200, the amount above it represents earned interest in this simplified model. The exact result depends on the rate and how the calculator applies each monthly step. The example is not a promise of growth; it simply shows how to separate deposited money from investment earnings.</p>
 
-          <h2>Why the year-by-year table matters</h2>
+          <h2>Using the comparison tool to test realistic options</h2>
 
-          <p>Only showing the final value would hide most of the process. The year-by-year breakdown shows how the balance, principal, and interest change throughout the projection. Early in the timeline, the difference may appear modest. Later, the combined effect of repeated deposits and accumulated interest becomes more visible.</p>
+          <p>This calculator demonstrates how the inputs relate mathematically. It does not prescribe how much anyone should contribute. A sustainable monthly amount depends on income, required expenses, debt, emergency savings, and other financial goals.</p>
 
-          <p>The chart provides a quick visual comparison, while the table provides exact values. Both are necessary because users do not all interpret information in the same way. A chart makes the widening gap easy to recognize. A table makes it possible to inspect a specific year without estimating from a line.</p>
+          <p>The comparison feature lets users explore two plans without treating either one as a universal answer. Change one input at a time and ask questions such as:</p>
 
-          <h2>The practical lesson behind the calculation</h2>
+          <ul>
+            <li>What happens if I contribute less each month but continue for longer?</li>
+            <li>How does increasing the deposit affect principal and earned interest?</li>
+            <li>What changes when both plans use the same deposit but different assumed rates?</li>
+            <li>How much of each final balance came from deposits rather than interest?</li>
+          </ul>
 
-          <p>The central lesson is not that one specific contribution guarantees one specific result. The useful lesson is that long-term growth depends on more than a starting balance. Contribution amount, contribution frequency, time, and rate work together.</p>
+          <p>These are hypothetical comparisons, not predictions or guarantees. The calculator uses the values entered and assumes the same rate throughout the projection. It does not model taxes, fees, inflation, withdrawals, market volatility, or changing returns.</p>
 
-          <p>By changing one input at a time, users can see which part of the scenario produced the difference. That direct feedback supports the original educational purpose of the project: making fiscal responsibility and compound growth easier to understand through interaction instead of relying only on definitions.</p>
+          <h2>Why year-by-year data matters</h2>
 
-          <p>Airgead turns the calculation into something users can test. The numbers become easier to evaluate because the application shows where the final balance came from, how it changed each year, and what recurring deposits added to the result.</p>
+          <p>A final number provides a destination, but the yearly breakdown shows the path. During the first few years, the difference between two scenarios may appear small. As contributions continue and more of the balance has time to earn interest, the gap can become easier to see.</p>
+
+          <p>The chart provides a quick visual comparison. The table provides the exact balance, principal, and interest recorded for each year. Together, they make it possible to recognize the overall trend and inspect a specific point in the projection.</p>
+
+          <h2>The practical takeaway</h2>
+
+          <p>Long-term growth depends on several connected factors: the starting balance, contribution amount, contribution frequency, time, and assumed rate. Monthly deposits matter because they add principal consistently and give at least some of that new money time to earn interest.</p>
+
+          <p>Even so, a larger input is not automatically a better real-life plan if the amount cannot be maintained. The most useful projection begins with a contribution that fits the person’s actual budget. From there, Airgead can show how that amount behaves over time and how a different contribution would change the result.</p>
+
+          <p>Try adjusting one value at a time. Watch how the chart changes, then check the table to see where the difference came from. That interaction turns compound interest from an abstract definition into a process that can be examined year by year.</p>
 
           <nav class="article-nav" aria-label="Article navigation">
             <a class="btn btn-ghost" href="articles.html">← All Articles</a>
