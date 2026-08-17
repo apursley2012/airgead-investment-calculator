@@ -7,7 +7,7 @@ Date: July 2026
 
 <div align="center">
 
-<img src="assets/logo/airgead-mark.png" alt="Airgead Investment Calculator logo" width="180">
+<img src="assets/logo/airgead-mark.png" alt="Airgead Investment Calculator logo" width="200">
 
 # Airgead Investment Calculator
 
