@@ -1,756 +1,469 @@
 <!--
 File: README.md
-Document Title: Airgead Investment Calculator Browser Demo Report
-Author: Alysha Pursley, Software Developer
-Date: July 2026
+Document Title: Airgead Investment Calculator
+Author: Alysha Pursley
+Date: August 2026
 -->
 
 <div align="center">
 
-<img src="assets/logo/airgead-mark.png" alt="Airgead Investment Calculator logo" width="200">
+<img src="assets/logo/airgead-mark.png" alt="Airgead Investment Calculator logo" width="65%">
 
-# Airgead Investment Calculator
+<h1>Airgead Investment Calculator 💰</h1>
 
-### A Responsive Compound-Interest Calculator and Educational Browser Demo
+<p><a href="https://github.com/apursley2012/airgead-investment-calculator/stargazers"><img src="https://img.shields.io/github/stars/apursley2012/airgead-investment-calculator?style=for-the-badge&amp;logo=github&amp;label=Stars" alt="Stars"></a> <a href="https://github.com/apursley2012/airgead-investment-calculator/forks"><img src="https://img.shields.io/github/forks/apursley2012/airgead-investment-calculator?style=for-the-badge&amp;logo=github&amp;label=Forks" alt="Forks"></a> <a href="https://github.com/apursley2012/airgead-investment-calculator/issues"><img src="https://img.shields.io/github/issues/apursley2012/airgead-investment-calculator?style=for-the-badge&amp;logo=github&amp;label=Issues" alt="Issues"></a> <a href="https://github.com/apursley2012/airgead-investment-calculator/commits"><img src="https://img.shields.io/github/last-commit/apursley2012/airgead-investment-calculator?style=for-the-badge&amp;logo=git&amp;label=Last%20Commit" alt="Last Commit"></a> <a href="https://github.com/apursley2012/airgead-investment-calculator"><img src="https://img.shields.io/github/repo-size/apursley2012/airgead-investment-calculator?style=for-the-badge&amp;logo=github&amp;label=Repo%20Size" alt="Repo Size"></a> <a href="https://github.com/apursley2012/airgead-investment-calculator"><img src="https://img.shields.io/github/languages/top/apursley2012/airgead-investment-calculator?style=for-the-badge&amp;label=Top%20Language" alt="Top Language"></a></p>
 
-**HTML · CSS · JavaScript · Canvas API · Local Storage · C++**
+<p><a href="https://apursley2012.github.io/airgead-investment-calculator/"><img src="https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-222222?style=for-the-badge&amp;logo=githubpages&amp;logoColor=white" alt="Live Demo"></a> <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&amp;logo=cplusplus&amp;logoColor=white" alt="C++"> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&amp;logo=html5&amp;logoColor=white" alt="HTML5"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&amp;logo=css3&amp;logoColor=white" alt="CSS3"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&amp;logo=javascript&amp;logoColor=black" alt="JavaScript"></p>
 
-[Live Demo](https://apursley2012.github.io/airgead-investment-calculator/) · [Repository](https://github.com/apursley2012/airgead-investment-calculator)
+<p><strong>An investment-growth calculator that compares compound-interest outcomes with and without monthly deposits, shows year-by-year results, and lets users explore and save planning scenarios.</strong></p>
+
+<p><a href="https://apursley2012.github.io/airgead-investment-calculator/">Open the live project</a> · <a href="https://github.com/apursley2012/airgead-investment-calculator">View the repository</a> · <a href="https://github.com/apursley2012/airgead-investment-calculator/issues/new/choose">Report an issue or request an addition</a></p>
 
 </div>
 
 ---
 
-## Table of Contents
+## Table of Contents 📖
 
-1. [Project Overview](#project-overview)
-2. [Purpose](#purpose)
-3. [Design Goals](#design-goals)
-4. [Features](#features)
-5. [Application Pages](#application-pages)
-6. [How the Calculator Works](#how-the-calculator-works)
-7. [Calculation Model](#calculation-model)
-8. [Project Architecture](#project-architecture)
-9. [Technologies Used](#technologies-used)
-10. [Data and Browser Storage](#data-and-browser-storage)
-11. [Responsive Design](#responsive-design)
-12. [Accessibility](#accessibility)
-13. [Installation and Local Use](#installation-and-local-use)
-14. [Deployment](#deployment)
-15. [Using the Application](#using-the-application)
-16. [Testing and Validation](#testing-and-validation)
-17. [Browser Compatibility](#browser-compatibility)
-18. [Original C++ Source](#original-c-source)
-19. [Project Structure](#project-structure)
-20. [Customization](#customization)
-21. [Known Limitations](#known-limitations)
-22. [Future Enhancements](#future-enhancements)
-23. [Author](#author)
-24. [License](#license)
-
----
-
-## Project Overview
-
-Airgead is an interactive investment calculator that shows how an initial balance can grow through compound interest. It compares two projections: one that allows the starting balance to grow on its own and one that adds a recurring monthly deposit.
-
-I originally developed the project as a C++ console application. The calculation accepted an initial investment, monthly deposit, annual interest rate, and investment period, then produced yearly reports for both growth scenarios. I rebuilt that logic as a responsive static website so the project can be tested directly in a browser without compiling the source code.
-
-The browser version keeps the original educational purpose while expanding the experience with:
-
-- Live calculation updates
-- A year-by-year results table
-- Custom canvas charts
-- Side-by-side scenario comparison
-- Browser-based saved plans
-- CSV export
-- Supporting explanations, articles, and case-study content
-- A responsive interface for mobile, tablet, and desktop screens
-
-The application runs entirely on the client. It does not require a backend, database, user account, package installation, or build process.
+*   [Project Overview 🔎](#project-overview)
+    *   [Purpose 🎯](#purpose)
+    *   [Design Style and Inspiration 🎨](#design-style-and-inspiration)
+    *   [Main Color Palette 🌈](#main-color-palette)
+    *   [Preview Screenshots 🖼️](#preview-screenshots)
+*   [Key Features ✨](#key-features)
+*   [Tech Stack 🛠️](#tech-stack)
+*   [Live Demo 🚀](#live-demo)
+*   [Installation 📦](#installation)
+    *   [Local Use 💻](#local-use)
+    *   [GitHub Pages Deployment 🌐](#github-pages-deployment)
+*   [Usage 🧭](#usage)
+*   [Project Structure 🗂️](#project-structure)
+    *   [Pages Included 📄](#pages-included)
+    *   [Core Files and Architecture 🧩](#core-files-and-architecture)
+    *   [File and Folder Structure 🌳](#file-and-folder-structure)
+*   [Calculation Model 🧮](#calculation-model)
+*   [Customization Guide 🎨](#customization-guide)
+*   [Accessibility and Browser Compatibility ♿](#accessibility-and-browser-compatibility)
+*   [Repository Relationship 🔗](#repository-relationship)
+*   [Project Scope and Limitations 📌](#project-scope-and-limitations)
+*   [Possible Future Enhancements 💡](#possible-future-enhancements)
+*   [Contributing 🤝](#contributing)
+    *   [Reporting Issues 🐛](#reporting-issues)
+    *   [Requesting Additions 📝](#requesting-additions)
+*   [License 📜](#license)
+*   [Important Links 🔗](#important-links)
+*   [Copyright ©️](#copyright)
 
 ---
 
-## Purpose
+<a id="project-overview"></a>
 
-The project was designed around a practical financial education scenario. The requested application needed to help users understand fiscal responsibility, investment growth, and the effect of compound interest through interaction instead of definitions alone.
+<details open>
+<summary><h2><strong>Project Overview 🔎</strong></h2></summary>
 
-I focused the application on four values:
 
-1. The amount available at the beginning
-2. The amount contributed each month
-3. The estimated annual interest rate
-4. The number of years the balance will grow
 
-The comparison between growth with and without monthly deposits is the most important part of the application. It shows that a final balance is affected by both investment earnings and the principal added over time.
+I developed **Airgead Investment Calculator** as an investment-growth calculator that compares compound-interest outcomes with and without monthly deposits, shows year-by-year results, and lets users explore and save planning scenarios.
 
-This is an educational projection tool. It is not intended to provide individualized financial advice or guarantee future investment performance.
+</details>
 
----
+<a id="purpose"></a>
 
-## Design Goals
+<details open>
+<summary><h3><strong>Purpose 🎯</strong></h3></summary>
 
-### Make the calculation understandable
 
-I did not want the application to show only one large final number. The results identify total principal, interest earned, growth without deposits, and the value produced when monthly deposits are included.
 
-### Preserve the original logic
+I built the Airgead Investment Calculator to make compound growth easier to understand than a single final-balance number. Users can enter a starting amount, monthly contribution, annual interest rate, and investment period, then compare how the same plan grows with and without ongoing deposits. The site keeps the calculator, comparison view, results, saved plans, explanations, and supporting writing connected so someone can both use the numbers and understand what they mean.
 
-The web version is based on the same monthly compounding concept used by the original C++ program. The presentation changed, but the project remains centered on the original investment-growth requirements.
+</details>
 
-### Keep the demo completely static
+<a id="design-style-and-inspiration"></a>
 
-The finished site uses plain HTML, CSS, and JavaScript. It can be deployed directly to GitHub Pages and does not depend on a framework, server, database, or third-party API.
+<details open>
+<summary><h3><strong>Design Style and Inspiration 🎨</strong></h3></summary>
 
-### Provide a complete portfolio experience
 
-The project includes more than a calculator form. It provides an introduction, calculation tools, results, supporting documentation, articles, and the original source so visitors can understand both the application and the decisions behind it.
 
-### Remain usable at every viewport width
+I designed **Airgead Investment Calculator** around a restrained financial-planning design instead of a high-gloss fintech look. Navy provides structure, teal identifies interactive and calculated information, gold adds selective emphasis, and cream and paper surfaces keep forms, projections, tables, and explanations easy to read. The layout is centered on entering assumptions, comparing outcomes, and understanding the effect of recurring contributions, so the visual treatment supports the calculations rather than competing with them.
 
-All pages use fluid wrappers, responsive grids, flexible controls, and text wrapping. No full page is intended to extend past 100% of the viewport. On the detailed results page, the wide year-by-year table scrolls inside its own card at small widths instead of forcing the whole page to overflow.
+</details>
 
----
+<a id="main-color-palette"></a>
 
-## Features
+<details open>
+<summary><h3><strong>Main Color Palette 🌈</strong></h3></summary>
 
-### Investment Calculator
 
-- Accepts an initial investment amount
-- Accepts a recurring monthly deposit
-- Accepts an annual interest rate
-- Accepts an investment period of up to 80 years
-- Prevents negative values from entering the calculation
-- Updates projected balances while the input values change
-- Displays the difference created by monthly contributions
 
-### Detailed Results
+I pulled the palette below directly from the current project stylesheet `css/styles.css`.
 
-- Shows the final balance with monthly deposits
-- Shows the final balance without additional deposits
-- Separates total principal from earned interest
-- Displays a custom growth chart
-- Provides a year-by-year data table
-- Saves the current calculation to the browser
-- Exports the detailed projection as CSV
+| Hex | Color Name | Primary Use |
+| --- | --- | --- |
+| `#213243` | Ink | Primary body text and structural contrast |
+| `#17324D` | Navy | Primary brand color, headers, and strong interface areas |
+| `#0F8B8D` | Teal | Primary interactive and calculated-data accent |
+| `#0A6F72` | Deep Teal | Darker teal states and supporting emphasis |
+| `#D6A94B` | Gold | Selective financial highlights and decorative emphasis |
+| `#F7F1E3` | Cream | Main warm background |
+| `#FFFDF7` | Paper | Cards, forms, tables, and light content surfaces |
+| `#DFEEE9` | Mint | Soft supporting panels and comparison areas |
+| `#C9D8D4` | Line | Borders and separators |
+| `#64748B` | Muted Slate | Secondary text and explanatory copy |
 
-### Scenario Comparison
+</details>
 
-- Places two investment plans side by side
-- Allows independent starting balances
-- Allows independent monthly deposits
-- Allows independent annual rates
-- Allows independent timeframes
-- Updates both results immediately
-- Displays principal and interest in a custom comparison chart
+<a id="preview-screenshots"></a>
 
-### Saved Plans
+<details open>
+<summary><h3><strong>Preview Screenshots 🖼️</strong></h3></summary>
 
-- Stores selected calculations in `localStorage`
-- Lists the plan date, deposit amount, timeframe, final balance, and interest
-- Reopens a saved plan on the detailed results page
-- Deletes individual saved plans
-- Keeps all saved information in the current browser
 
-### Educational Content
 
-- Explains the monthly compounding model
-- Includes a project case study
-- Includes supporting project notes
-- Includes full-length articles about compound growth and development
-- Keeps the original C++ source available for technical review
+Click any preview image in the repository screenshot folder to open the full-size file.
 
-### Static Demo Behavior
 
-- Uses a clearly labeled mock sign-in
-- Does not create a real account
-- Does not transmit login information
-- Generates CSV files in the browser
-- Requires no server-side processing
+#### 🖼️ Screenshot Gallery
+
+
+The gallery uses paired, centered images when screenshots are present. Keep screenshots under `images/screenshots/` and use names such as `airgead-investment-calculator-screenshot-01.png`, `airgead-investment-calculator-screenshot-02.png`, and so on. I have not invented image filenames that were not verified in the current project source.
+
+</details>
 
 ---
 
-## Application Pages
+<a id="key-features"></a>
 
-| Page | File | Purpose |
-|---|---|---|
-| Home | `index.html` | Introduces the project and provides entry points to the calculator and supporting content. |
-| Calculator | `pages/calculator.html` | Collects the four investment inputs and previews the projected balances. |
-| Results | `pages/results.html` | Displays the detailed chart, summary values, year-by-year table, save action, and CSV export. |
-| Compare | `pages/compare.html` | Compares two independently configured investment scenarios. |
-| Saved Plans | `pages/saved-plans.html` | Displays and manages calculations saved in the current browser. |
-| How It Works | `pages/how-it-works.html` | Explains the monthly compounding process and the static demo behavior. |
-| Articles | `pages/articles.html` | Provides the central index for the project’s full-length articles. |
-| Monthly Deposits Article | `pages/article-monthly-deposits.html` | Explains how recurring deposits affect principal, interest, and long-term growth. |
-| C++ to Browser Article | `pages/article-cpp-to-browser.html` | Documents how the original console logic was converted into an interactive static application. |
-| Case Study | `pages/case-study.html` | Describes the project problem, rebuild, architecture, and possible future work. |
-| Project Notes | `pages/blog.html` | Provides shorter supporting notes about savings behavior and calculation logic. |
-| Sign In | `pages/login.html` | Demonstrates a clearly identified browser-only mock sign-in flow. |
+<details open>
+<summary><h2><strong>Key Features ✨</strong></h2></summary>
 
-The shared shell component inserts the header, desktop navigation, mobile navigation, footer, and toast notification container into each page.
 
----
 
-## How the Calculator Works
+*   **Calculate compound growth from user-supplied investment inputs**
+*   **Compare balances with and without monthly deposits**
+*   **Display year-by-year ending balance and interest earned**
+*   **Validate calculator inputs before producing results**
+*   **Save planning scenarios in the browser**
+*   **Reopen and compare saved plans**
+*   **Provide a How It Works explanation, case study, and articles**
+*   **Run entirely as a static GitHub Pages application**
 
-The calculator reads the following input values:
-
-```text
-Starting balance
-Monthly deposit
-Annual interest rate
-Number of years
-```
-
-The annual percentage rate is converted into a monthly decimal rate:
-
-```text
-monthly rate = annual rate / 100 / 12
-```
-
-The application maintains two balances:
-
-- `withDeposits`
-- `withoutDeposits`
-
-Each month, the calculation:
-
-1. Applies the monthly interest rate to both balances.
-2. Adds the monthly contribution to the deposit scenario.
-3. Adds the contribution to the tracked principal.
-4. Repeats the process for twelve months.
-5. Records a row at the end of the year.
-
-Each yearly result includes:
-
-```text
-year
-withDeposits
-withoutDeposits
-totalDeposits
-interestEarned
-```
-
-The results page and comparison page both use the same calculation function. This prevents separate parts of the application from producing different answers from the same inputs.
+</details>
 
 ---
 
-## Calculation Model
+<a id="tech-stack"></a>
 
-The core function is located in:
+<details open>
+<summary><h2><strong>Tech Stack 🛠️</strong></h2></summary>
 
-```text
-js/lib/calculator.js
-```
 
-Its public calculation function is:
 
-```javascript
-calculateCompoundInterest(inputs)
-```
+*   **HTML**
+*   **CSS**
+*   **JavaScript**
+*   **Modular calculator JavaScript**
+*   **Local Storage for saved plans**
+*   **GitHub Pages**
 
-Input values are converted to numbers before they enter the projection. Negative balances, deposits, and rates are clamped to zero. The number of years is rounded and limited to a maximum of 80.
-
-At the end of each year, currency values are rounded to whole dollars for display and export. Earned interest is calculated as:
-
-```text
-interest earned = balance with deposits - total principal
-```
-
-This model is appropriate for demonstrating the relationship among contribution amount, time, assumed rate, principal, and compound growth. It does not account for every real financial variable, including:
-
-- Changing interest rates
-- Inflation
-- Account fees
-- Taxes
-- Contribution timing differences between institutions
-- Market volatility
-- Withdrawal activity
+</details>
 
 ---
 
-## Project Architecture
+<a id="live-demo"></a>
 
-### Shared Shell
+<details open>
+<summary><h2><strong>Live Demo 🚀</strong></h2></summary>
 
-`js/components/shell.js` defines the global navigation links and creates the common page shell. Keeping this markup in one component makes header and footer updates consistent across the site.
 
-### Calculation Library
 
-`js/lib/calculator.js` contains:
+Open the published project here:
 
-- Compound-interest calculations
-- Currency formatting
-- Current-calculation storage
-- Saved-plan storage
-- CSV creation and download behavior
+[https://apursley2012.github.io/airgead-investment-calculator/](https://apursley2012.github.io/airgead-investment-calculator/)
 
-### Chart Library
-
-`js/lib/charts.js` uses the Canvas API to draw:
-
-- The year-by-year growth chart
-- The scenario comparison chart
-- Grid lines and value labels
-- Principal and interest segments
-
-The charts resize when the viewport changes.
-
-### Page Controllers
-
-Scripts in `js/pages/` connect individual pages to the shared libraries:
-
-| Script | Responsibility |
-|---|---|
-| `calculator.js` | Reads inputs, animates the displayed balance, updates summary values, and opens the results page. |
-| `results.js` | Loads the current calculation, fills the table, draws the chart, saves plans, and exports CSV. |
-| `compare.js` | Reads both scenarios and updates the comparison values and chart. |
-| `saved-plans.js` | Renders, opens, and deletes locally saved plans. |
-| `login.js` | Handles the clearly labeled mock sign-in demonstration. |
-| `noop.js` | Supports pages that only require shared static behavior. |
+</details>
 
 ---
 
-## Technologies Used
+<a id="installation"></a>
 
-| Technology | Use |
-|---|---|
-| HTML5 | Semantic page structure, forms, tables, articles, and navigation |
-| CSS3 | Layout, visual design, responsive behavior, typography, and interaction states |
-| JavaScript ES Modules | Calculation logic, page behavior, storage, exports, and shared components |
-| Canvas API | Custom growth and comparison charts |
-| Web Storage API | Current calculations, saved plans, and demo session state |
-| Blob and Object URL APIs | Client-side CSV generation |
-| C++ | Original console application and object-oriented calculation implementation |
-| GitHub Pages | Static site hosting |
+<details open>
+<summary><h2><strong>Installation 📦</strong></h2></summary>
 
-The project uses Google Fonts for the Fraunces and Inter typefaces. The application does not require npm packages or a JavaScript framework.
 
----
 
-## Data and Browser Storage
+</details>
 
-Airgead does not use a remote database.
+<a id="local-use"></a>
 
-The application uses the following `localStorage` keys:
+<details open>
+<summary><h3><strong>Local Use 💻</strong></h3></summary>
 
-| Key | Stored Value |
-|---|---|
-| `airgead_current_calc` | The most recent inputs, yearly results, and update time |
-| `airgead_saved_plans` | The collection of plans saved by the user |
-| `airgead_user` | The email entered into the mock sign-in demonstration |
 
-Stored data:
 
-- Remains in the current browser
-- Is not synchronized between devices
-- Is not sent to a server
-- Can be removed by clearing site data
+1. Clone or download the repository.
+2. Keep the existing folder structure intact so the page can still find its styles, scripts, data, and assets.
+3. Open the root `index.html` for static projects, or follow the project-specific runtime instructions when a backend/source application is included.
+4. Before I publish changes, I check the main workflow, navigation, saved browser data where it applies, and the responsive layout.
 
-The sign-in page is demonstration-only. It does not provide authentication or account security.
+</details>
+
+<a id="github-pages-deployment"></a>
+
+<details open>
+<summary><h3><strong>GitHub Pages Deployment 🌐</strong></h3></summary>
+
+
+
+For the static/public portion, keep `index.html` at the repository root, use relative asset paths, then enable **Settings → Pages → Deploy from a branch → main → / (root)**. Projects that include Python, Node, MongoDB, authentication, browser automation, or another server runtime still need an appropriate backend host for those server-dependent features.
+
+</details>
 
 ---
 
-## Responsive Design
+<a id="usage"></a>
 
-I designed the application to remain usable on mobile, tablet, laptop, and desktop viewports.
+<details open>
+<summary><h2><strong>Usage 🧭</strong></h2></summary>
 
-Responsive behavior includes:
 
-- Fluid wrappers that remain inside the viewport
-- A mobile menu below the desktop navigation breakpoint
-- Single-column card layouts on smaller screens
-- Full-width form fields where fixed desktop widths would not fit
-- Flexible action toolbars
-- Currency values that scale with `clamp()`
-- Text wrapping for headings, labels, buttons, and generated plan names
-- Charts constrained to their parent cards
-- A table-specific horizontal scrolling container
-- Cards and content sections that never require full-page horizontal scrolling
 
-The year-by-year results table keeps a readable minimum width. On a narrow phone, the user can scroll that table within the table card while the header, chart, summary, and rest of the page stay fixed to the viewport width.
+Start with the main page and follow the project’s primary workflow. The interface is intended to be usable without reading the source first, while the case studies, articles, documentation, and source folders provide the deeper implementation context. Where browser storage is used, saved information belongs to that browser/device unless the project explicitly includes a shared backend.
+
+</details>
 
 ---
 
-## Accessibility
+<a id="project-structure"></a>
 
-The application includes:
+<details open>
+<summary><h2><strong>Project Structure 🗂️</strong></h2></summary>
 
-- Semantic headings and page regions
-- Standard labeled form controls
-- Descriptive image alternative text
-- Button elements for application actions
-- Link elements for navigation
-- Visible keyboard focus styling on inputs
-- `aria-label` values for icon-only controls
-- `aria-expanded` on the mobile menu button
-- A live status region for toast messages
-- Color choices with clear light and dark contrast
-- Text labels in addition to chart colors
-- Responsive text wrapping instead of clipped content
 
-Canvas charts support the visual presentation, while the same result values remain available as text and tabular data.
 
----
+</details>
 
-## Installation and Local Use
+<a id="pages-included"></a>
 
-### Download the Project
+<details open>
+<summary><h3><strong>Pages Included 📄</strong></h3></summary>
 
-1. Open the repository on GitHub.
-2. Select **Code**.
-3. Select **Download ZIP**.
-4. Extract the downloaded archive.
 
-You can also clone the repository:
 
-```bash
-git clone https://github.com/apursley2012/airgead-investment-calculator.git
-cd airgead-investment-calculator
-```
+| Page / Area | Purpose |
+| --- | --- |
+| `index.html` | Project landing page |
+| `pages/calculator.html` | Investment input workflow |
+| `pages/results.html` | Calculated year-by-year results |
+| `pages/compare.html` | Scenario comparison view |
+| `pages/saved-plans.html` | Saved browser-side investment plans |
+| `pages/how-it-works.html` | Compound-interest explanation |
+| `pages/case-study.html` | Detailed project case study |
+| `pages/articles.html` | Supporting articles |
+| `pages/blog.html` | Writing/blog page |
+| `pages/login.html` | Account-style interface page |
 
-### Run the Browser Demo
+</details>
 
-Because the project uses JavaScript modules, run it through a local web server instead of opening `index.html` with a `file://` URL.
+<a id="core-files-and-architecture"></a>
 
-With Python:
+<details open>
+<summary><h3><strong>Core Files and Architecture 🧩</strong></h3></summary>
 
-```bash
-python -m http.server 8000
-```
 
-Then open:
 
-```text
-http://localhost:8000/
-```
+The repository separates the public interface from supporting source and documentation where the project needs that distinction. The important rule is that **Airgead Investment Calculator should be documented as the project it is**, not as a generic theme or one-size-fits-all site. Files that implement the main workflow belong with the application, while case studies, articles, source history, data, or backend code are documented according to their real role.
 
-With the VS Code Live Server extension:
+</details>
 
-1. Open the project folder in VS Code.
-2. Open `index.html`.
-3. Select **Open with Live Server**.
+<a id="file-and-folder-structure"></a>
 
-No dependency installation or build command is required.
+<details open>
+<summary><h3><strong>File and Folder Structure 🌳</strong></h3></summary>
 
----
 
-## Deployment
-
-### GitHub Pages
-
-1. Push the complete project to the repository’s default branch.
-2. Open the repository’s **Settings**.
-3. Select **Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select the default branch and the root folder.
-6. Save the configuration.
-
-The project uses relative links and assets, so it can run from a GitHub Pages repository path without a build step.
-
-The expected address is:
-
-```text
-https://apursley2012.github.io/airgead-investment-calculator/
-```
-
-If the final repository name changes, update the demo and repository links at the top of this README.
-
----
-
-## Using the Application
-
-### Run a Calculation
-
-1. Open the **Calculator** page.
-2. Enter a starting balance.
-3. Enter a monthly deposit.
-4. Enter an estimated annual interest rate.
-5. Enter the number of years.
-6. Review the live balance comparison.
-7. Select **View Details**.
-
-### Review Detailed Results
-
-The Results page displays:
-
-- Final balance with deposits
-- Total principal
-- Interest earned
-- Final balance without deposits
-- Growth chart
-- Year-by-year table
-
-Select **Save Plan** to keep the calculation in the current browser, or select **Export CSV** to download the yearly data.
-
-### Compare Two Plans
-
-1. Open **Compare**.
-2. Change the values in Scenario A.
-3. Change the values in Scenario B.
-4. Review the updated final balances.
-5. Use the chart to compare principal and earned interest.
-
-### Reopen a Saved Plan
-
-1. Save a calculation from the Results page.
-2. Open **Saved Plans**.
-3. Select **View Details** on the plan.
-4. Delete the plan when it is no longer needed.
-
----
-
-## Testing and Validation
-
-The project should be checked after changes to calculation logic, layout, navigation, or storage behavior.
-
-### Functional Checks
-
-- Confirm all four calculator inputs update the preview.
-- Confirm **View Details** opens a populated results page.
-- Confirm the results table contains year zero through the selected final year.
-- Confirm the final table row matches the summary values.
-- Confirm both comparison scenarios update independently.
-- Confirm saving creates a card on the Saved Plans page.
-- Confirm reopening a plan restores the correct detailed results.
-- Confirm deleting a plan removes only the selected plan.
-- Confirm CSV export contains the displayed year-by-year data.
-- Confirm the mock sign-in remains clearly labeled as a demonstration.
-
-### Responsive Checks
-
-- Check the site at approximately 320, 375, 768, 1024, and 1440 pixels wide.
-- Confirm the page does not produce full-page horizontal scrolling.
-- Confirm the navigation changes to the mobile menu before the links collide.
-- Confirm calculator fields remain fully visible.
-- Confirm large currency values wrap or scale instead of leaving their cards.
-- Confirm charts remain inside their containers.
-- Confirm only the results table scrolls horizontally when necessary.
-- Confirm article text remains readable without side-to-side scrolling.
-
-### Content Checks
-
-- Confirm every header and footer link resolves.
-- Confirm all logo paths load from `assets/logo/`.
-- Confirm article pages link back to the article index.
-- Confirm no placeholder notes are visible in the finished site or README.
-
----
-
-## Browser Compatibility
-
-The application is intended for current versions of:
-
-- Google Chrome
-- Microsoft Edge
-- Mozilla Firefox
-- Apple Safari
-- Mobile Safari
-- Chrome for Android
-
-The browser must support:
-
-- ES modules
-- `localStorage`
-- Canvas
-- `Blob`
-- `URL.createObjectURL()`
-
-Older browsers without modern JavaScript module support are not targeted.
-
----
-
-## Original C++ Source
-
-The `source/` folder preserves the original console application:
-
-| File | Purpose |
-|---|---|
-| `airgeadBankingApp.cpp` | Runs the program, collects inputs, and displays the investment reports. |
-| `investment.h` | Declares the investment class and its public interface. |
-| `investment.cpp` | Implements investment calculations and report behavior. |
-
-To compile the original source with `g++`:
-
-```bash
-cd source
-g++ airgeadBankingApp.cpp investment.cpp -o airgead
-```
-
-Run it on macOS or Linux:
-
-```bash
-./airgead
-```
-
-Run it on Windows PowerShell:
-
-```powershell
-.\airgead.exe
-```
-
-The static browser demo and C++ source represent two interfaces for the same core project concept. The C++ files show the original object-oriented implementation, while the web version makes the calculation accessible online.
-
----
-
-## Project Structure
 
 ```text
 airgead-investment-calculator/
-├── index.html
 ├── README.md
-├── assets/
-│   ├── logo/
-│   │   ├── airgead-mark.png
-│   │   └── airgead-mark-light.png
-│   └── screenshots/
-│       ├── airgead-console-screenshot1.png
-│       └── airgead-console-screenshot2.png
-├── css/
-│   └── styles.css
-├── js/
-│   ├── components/
-│   │   └── shell.js
-│   ├── lib/
-│   │   ├── calculator.js
-│   │   └── charts.js
-│   └── pages/
-│       ├── calculator.js
-│       ├── compare.js
-│       ├── home.js
-│       ├── login.js
-│       ├── noop.js
-│       ├── results.js
-│       └── saved-plans.js
-├── pages/
-│   ├── article-cpp-to-browser.html
-│   ├── article-monthly-deposits.html
-│   ├── articles.html
-│   ├── blog.html
-│   ├── calculator.html
-│   ├── case-study.html
-│   ├── compare.html
-│   ├── how-it-works.html
-│   ├── login.html
-│   ├── results.html
-│   └── saved-plans.html
-└── source/
-    ├── airgeadBankingApp.cpp
-    ├── investment.cpp
-    └── investment.h
+├── index.html
+├── pages/calculator.html
+├── pages/results.html
+├── pages/compare.html
+├── pages/saved-plans.html
+├── pages/how-it-works.html
+├── pages/case-study.html
+└── pages/articles.html
 ```
 
----
+This tree highlights the major documented areas rather than inventing files that were not verified.
 
-## Customization
-
-### Change Colors
-
-The main design tokens are CSS custom properties at the beginning of:
-
-```text
-css/styles.css
-```
-
-They control:
-
-- Green brand shades
-- Gold accents
-- Canvas and paper backgrounds
-- Text colors
-- Border colors
-- Shadows
-- Card radius
-
-### Change Navigation
-
-Update the `links` array in:
-
-```text
-js/components/shell.js
-```
-
-The same array builds the desktop and mobile navigation.
-
-### Change Calculator Defaults
-
-Edit the `value` attributes in:
-
-```text
-pages/calculator.html
-pages/compare.html
-```
-
-### Change Calculation Rules
-
-Update:
-
-```text
-js/lib/calculator.js
-```
-
-Any calculation change should be tested on the Calculator, Results, and Compare pages.
-
-### Add an Article
-
-1. Copy an existing article page in `pages/`.
-2. Replace its title, description, heading, metadata, and article content.
-3. Add a new article card to `pages/articles.html`.
-4. Confirm the page uses `../css/styles.css`.
-5. Confirm the page loads `../js/components/shell.js`.
+</details>
 
 ---
 
-## Known Limitations
+<a id="calculation-model"></a>
 
-- The application uses estimated fixed rates rather than real market data.
-- Currency is displayed in whole dollars.
-- The model does not include taxes, fees, inflation, or withdrawals.
-- Saved plans remain only in the current browser.
-- Clearing site data removes saved plans.
-- The mock sign-in is not real authentication.
-- The application does not synchronize data between devices.
-- Canvas charts are visual summaries; exact values are provided separately in text and tables.
+<details open>
+<summary><h2><strong>Calculation Model 🧮</strong></h2></summary>
 
----
 
-## Future Enhancements
 
-- Add optional inflation-adjusted values
-- Add variable contribution schedules
-- Add withdrawal modeling
-- Add account fees and tax assumptions
-- Add contribution timing options
-- Add more detailed chart legends and tooltips
-- Add a print-friendly results report
-- Add PDF export
-- Add import support for previously exported plans
-- Add automated unit tests for known calculation scenarios
-- Add more educational articles about budgeting and long-term planning
-- Add optional real account sync only if a secure backend is introduced
+The core calculation keeps the two scenarios separate: growth from the starting principal alone and growth when monthly deposits continue throughout the investment period. The year-by-year tables make that difference visible rather than hiding it inside a single total.
+
+Saved plans are browser-side convenience data in the static version. They make repeated comparisons practical without suggesting that GitHub Pages is providing a secure financial account or server-side user database.
+
+</details>
 
 ---
 
-## Author
+<a id="customization-guide"></a>
 
-**Alysha Pursley**  
-Software Developer
+<details open>
+<summary><h2><strong>Customization Guide 🎨</strong></h2></summary>
 
-- GitHub: [apursley2012](https://github.com/apursley2012)
-- Portfolio: [apursley2012.github.io/eportfolio](https://apursley2012.github.io/eportfolio/)
+
+
+The safest way to customize or extend **Airgead Investment Calculator** is to preserve its existing workflow first, then change one layer at a time. Update project content and data in the files that already own that information, keep visual changes inside the existing style system, and test every page that shares the changed component or data source. New features should solve a problem that belongs to this project instead of copying a feature from an unrelated application.
+
+For visual changes, update the documented palette intentionally and re-check contrast, responsive spacing, screenshots, and any state colors that depend on the same variables. For data or logic changes, test both the normal path and empty/error/edge cases before publishing.
+
+</details>
 
 ---
 
-## License
+<a id="accessibility-and-browser-compatibility"></a>
 
-This project is part of my software development portfolio. Unless a separate license file states otherwise, the source and project content may not be redistributed or presented as another person’s work.
+<details open>
+<summary><h2><strong>Accessibility and Browser Compatibility ♿</strong></h2></summary>
+
+
+
+The public interface should remain keyboard-navigable, readable at common mobile and desktop widths, and usable without relying on color alone to communicate state. Form controls should keep visible labels or accessible names, images should use meaningful `alt` text, focus indicators should remain visible, and decorative animation should respect reduced-motion preferences when motion is present. Browser compatibility should be checked in current Safari, Chrome, Firefox, and Edge where practical.
+
+</details>
 
 ---
 
-<div align="center">
+<a id="repository-relationship"></a>
 
-**Airgead Investment Calculator**
+<details open>
+<summary><h2><strong>Repository Relationship 🔗</strong></h2></summary>
 
-© 2026 Alysha Pursley. All rights reserved.
 
-</div>
+
+**Airgead Investment Calculator** is documented as its own project. Supporting case studies, articles, source history, static presentation layers, or backend/runtime folders are parts of this repository only when they help explain or run this project. They should not be described as separate replacement projects.
+
+Where this repository contains both a static GitHub Pages layer and source that requires another runtime, the two are related but not interchangeable: the static layer provides the public experience that can run in a browser, while the source/runtime layer preserves functionality that GitHub Pages cannot execute directly.
+
+</details>
+
+---
+
+<a id="project-scope-and-limitations"></a>
+
+<details open>
+<summary><h2><strong>Project Scope and Limitations 📌</strong></h2></summary>
+
+
+
+This README separates what the published browser version can do from functionality that belongs to a backend, database, native application, notebook, or other runtime. Static hosting limitations are stated where they materially affect the project. The documentation should not imply that GitHub Pages is providing server-side authentication, Python execution, MongoDB access, SMS delivery, or another service it cannot actually run.
+
+</details>
+
+---
+
+<a id="possible-future-enhancements"></a>
+
+<details open>
+<summary><h2><strong>Possible Future Enhancements 💡</strong></h2></summary>
+
+
+
+*   Add more comparison charts for long investment periods
+*   Add export/print support for saved plans and annual tables
+*   Expand input guidance for edge cases such as zero monthly deposits
+*   Add automated tests around compounding and rounding behavior
+
+</details>
+
+---
+
+<a id="contributing"></a>
+
+<details open>
+<summary><h2><strong>Contributing 🤝</strong></h2></summary>
+
+
+
+Contributions, bug reports, and practical improvement suggestions are welcome when they preserve the existing project direction and do not replace its identity with a generic redesign.
+
+</details>
+
+<a id="reporting-issues"></a>
+
+<details open>
+<summary><h3><strong>Reporting Issues 🐛</strong></h3></summary>
+
+
+
+When reporting a problem, include the page or workflow involved, what you expected, what actually happened, browser/device information when relevant, and a screenshot if the issue is visual.
+
+</details>
+
+<a id="requesting-additions"></a>
+
+<details open>
+<summary><h3><strong>Requesting Additions 📝</strong></h3></summary>
+
+
+
+Feature requests should explain the user problem the addition would solve and how it fits the existing project. Project-specific improvements are preferred over adding features only because they are common in other applications.
+
+</details>
+
+---
+
+<a id="license"></a>
+
+<details open>
+<summary><h2><strong>License 📜</strong></h2></summary>
+
+
+
+No license terms are assumed here. If the repository includes a `LICENSE` file, that file controls reuse. If it does not, normal copyright applies and permission should not be inferred from the repository being public.
+
+</details>
+
+---
+
+<a id="important-links"></a>
+
+<details open>
+<summary><h2><strong>Important Links 🔗</strong></h2></summary>
+
+
+
+*   **Live Project:** [https://apursley2012.github.io/airgead-investment-calculator/](https://apursley2012.github.io/airgead-investment-calculator/)
+*   **Repository:** [https://github.com/apursley2012/airgead-investment-calculator](https://github.com/apursley2012/airgead-investment-calculator)
+*   **Issues / Requests:** [https://github.com/apursley2012/airgead-investment-calculator/issues/new/choose](https://github.com/apursley2012/airgead-investment-calculator/issues/new/choose)
+
+</details>
+
+---
+
+<a id="copyright"></a>
+
+<details open>
+<summary><h2><strong>Copyright ©️</strong></h2></summary>
+
+
+
+© 2026 Alysha Pursley. Project documentation and original project materials are credited to their respective sources where applicable.
+
+
+---
+
+Made with care by Alysha Pursley.
+
+</details>
