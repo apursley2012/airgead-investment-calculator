@@ -9,6 +9,15 @@ Date: August 2026
 
 <img src="assets/logo/airgead-mark.png" alt="Airgead Investment Calculator logo" width="65%">
 
+<!--
+File: README.md
+Document Title: Airgead Investment Calculator
+Author: Alysha Pursley
+Date: August 2026
+-->
+
+<div align="center">
+
 <h1>Airgead Investment Calculator 💰</h1>
 
 <p><a href="https://github.com/apursley2012/airgead-investment-calculator/stargazers"><img src="https://img.shields.io/github/stars/apursley2012/airgead-investment-calculator?style=for-the-badge&amp;logo=github&amp;label=Stars" alt="Stars"></a> <a href="https://github.com/apursley2012/airgead-investment-calculator/forks"><img src="https://img.shields.io/github/forks/apursley2012/airgead-investment-calculator?style=for-the-badge&amp;logo=github&amp;label=Forks" alt="Forks"></a> <a href="https://github.com/apursley2012/airgead-investment-calculator/issues"><img src="https://img.shields.io/github/issues/apursley2012/airgead-investment-calculator?style=for-the-badge&amp;logo=github&amp;label=Issues" alt="Issues"></a> <a href="https://github.com/apursley2012/airgead-investment-calculator/commits"><img src="https://img.shields.io/github/last-commit/apursley2012/airgead-investment-calculator?style=for-the-badge&amp;logo=git&amp;label=Last%20Commit" alt="Last Commit"></a> <a href="https://github.com/apursley2012/airgead-investment-calculator"><img src="https://img.shields.io/github/repo-size/apursley2012/airgead-investment-calculator?style=for-the-badge&amp;logo=github&amp;label=Repo%20Size" alt="Repo Size"></a> <a href="https://github.com/apursley2012/airgead-investment-calculator"><img src="https://img.shields.io/github/languages/top/apursley2012/airgead-investment-calculator?style=for-the-badge&amp;label=Top%20Language" alt="Top Language"></a></p>
@@ -52,7 +61,7 @@ Date: August 2026
     *   [Requesting Additions 📝](#requesting-additions)
 *   [License 📜](#license)
 *   [Important Links 🔗](#important-links)
-*   [Copyright ©️](#copyright)
+*   [Attribution ℹ️](#attribution)
 
 ---
 
@@ -63,7 +72,13 @@ Date: August 2026
 
 
 
-I developed **Airgead Investment Calculator** as an investment-growth calculator that compares compound-interest outcomes with and without monthly deposits, shows year-by-year results, and lets users explore and save planning scenarios.
+
+
+**Airgead Investment Calculator** is an investment-growth tool for comparing long-term savings scenarios with and without recurring monthly contributions. It turns principal, contribution, rate, and time inputs into projected balances so the effect of compound growth is easier to understand.
+
+I designed the calculator to answer more than “what will the ending balance be?” The comparison between no-deposit growth and recurring-deposit growth makes the impact of saving habits visible, while the year-by-year results provide enough detail to understand how the balance changes over time rather than presenting a single unexplained number.
+
+The project keeps the calculation model and presentation closely connected. Inputs are intentionally direct, results are structured for comparison, and the supporting implementation makes the formulas and assumptions easier to inspect, test, and explain.
 
 </details>
 
@@ -74,8 +89,8 @@ I developed **Airgead Investment Calculator** as an investment-growth calculator
 
 
 
-I built the Airgead Investment Calculator to make compound growth easier to understand than a single final-balance number. Users can enter a starting amount, monthly contribution, annual interest rate, and investment period, then compare how the same plan grows with and without ongoing deposits. The site keeps the calculator, comparison view, results, saved plans, explanations, and supporting writing connected so someone can both use the numbers and understand what they mean.
 
+I created **Airgead Investment Calculator** to help people understand how consistent saving changes long-term investment growth, not just produce a final balance. The calculator lets someone compare the same investment plan with and without recurring monthly deposits so the effect of contribution habits is visible alongside compound interest. My goal was to make common investment-growth scenarios easier to explore, compare, save, and explain without requiring someone to build a spreadsheet first.
 </details>
 
 <a id="design-style-and-inspiration"></a>
@@ -96,17 +111,21 @@ I designed **Airgead Investment Calculator** around a restrained financial-plann
 
 
 
+
+
 I pulled the palette below directly from the current project stylesheet `css/styles.css`.
 
-| Hex | Color Name | Primary Use |
+Each row lists every interface-use category identified for that exact color value in the documented stylesheet analysis. When one hex value is reused for several jobs, I keep all of those uses together in the same row instead of reducing it to a single generic label.
+
+| Hex | Color Name | Complete Use in the Interface |
 | --- | --- | --- |
 | `#213243` | Ink | Primary body text and structural contrast |
-| `#17324D` | Navy | Primary brand color, headers, and strong interface areas |
+| `#17324D` | Navy | Primary brand color; headers; and strong interface areas |
 | `#0F8B8D` | Teal | Primary interactive and calculated-data accent |
 | `#0A6F72` | Deep Teal | Darker teal states and supporting emphasis |
 | `#D6A94B` | Gold | Selective financial highlights and decorative emphasis |
 | `#F7F1E3` | Cream | Main warm background |
-| `#FFFDF7` | Paper | Cards, forms, tables, and light content surfaces |
+| `#FFFDF7` | Paper | Cards; forms; tables; and light content surfaces |
 | `#DFEEE9` | Mint | Soft supporting panels and comparison areas |
 | `#C9D8D4` | Line | Borders and separators |
 | `#64748B` | Muted Slate | Secondary text and explanatory copy |
@@ -452,18 +471,23 @@ No license terms are assumed here. If the repository includes a `LICENSE` file, 
 
 ---
 
-<a id="copyright"></a>
+<a id="attribution"></a>
 
 <details open>
-<summary><h2><strong>Copyright ©️</strong></h2></summary>
+<summary><h2><strong>Attribution ℹ️</strong></h2></summary>
 
 
+Project documentation and original project materials are credited to their respective sources where applicable.
 
-© 2026 Alysha Pursley. Project documentation and original project materials are credited to their respective sources where applicable.
-
+</details>
 
 ---
 
-Made with care by Alysha Pursley.
+<div align=center>
+   
+***Made with ❤️ and a bit of 🪄.***
+<br>
+**©️ 2026 Alysha Pursley. All Rights Reserved.**
 
-</details>
+</div>
+
