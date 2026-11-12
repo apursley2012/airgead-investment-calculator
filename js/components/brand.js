@@ -11,14 +11,14 @@
 /**
  * Builds shared brand markup using a page-relative path to the site root.
  * @param {string} root Relative root ('' on the homepage, '../' on nested pages).
- * @param {{light?: boolean, showName?: boolean}} [options]
+ * @param {{showName?: boolean}} [options]
  * @returns {string} HTML for the home link and logo.
  */
-export function brandMarkup(root, { light = false, showName = false } = {}) {
-    const logoFile = light ? "airgead-mark-light.png" : "airgead-mark.png";
-    const name = showName ? "<span>Airgead</span>" : "";
+export function brandMarkup(root, { showName = false } = {}) {
+	const logoFile = "airgead-mark-light.png";
+	const name = showName ? "<span>Airgead Banking</span>" : "";
 
-    return `
+	return `
 		<a class="brand" href="${root}index.html">
 			<img
 				src="${root}assets/logo/${logoFile}"
