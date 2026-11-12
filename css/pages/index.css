@@ -9,180 +9,102 @@
 */
 
 .hero {
-    position: relative;
-    background:
-        radial-gradient(
-            circle 17px at 8% 9%,
-            color-mix(in srgb, var(--gold-200) 75%, transparent) 0 99%,
-            transparent 100%
-        ),
-        radial-gradient(
-            circle 22px at 56% 5%,
-            color-mix(in srgb, var(--green-700) 28%, transparent) 0 99%,
-            transparent 100%
-        ),
-        radial-gradient(
-            circle 19px at 92% 92%,
-            color-mix(in srgb, var(--gold) 30%, transparent) 0 99%,
-            transparent 100%
-        ),
-        radial-gradient(
-            circle 30px at 32% 12%,
-            color-mix(in srgb, var(--green-800) 30%, transparent) 0 99%,
-            transparent 100%
-        ),
-        radial-gradient(
-            circle 42px at 76% 86%,
-            color-mix(in srgb, var(--gold) 32%, transparent) 0 99%,
-            transparent 100%
-        ),
-        radial-gradient(
-            circle 92px at 14% 82%,
-            color-mix(in srgb, var(--green-700) 23%, transparent) 0 99%,
-            transparent 100%
-        ),
-        radial-gradient(
-            circle 58px at 82% 18%,
-            color-mix(in srgb, var(--gold-200) 65%, transparent) 0 99%,
-            transparent 100%
-        ),
-        linear-gradient(
-            135deg,
-            var(--parchment) 0%,
-            var(--green-100) 52%,
-            var(--canvas) 100%
-        );
-    overflow: hidden;
-    border-bottom: 1px solid var(--line);
-    padding: 88px 0 92px;
-    max-width: 100%;
+	position: relative;
+	background: radial-gradient(circle 17px at 8% 9%, color-mix(in srgb, var(--gold-200) 75%, transparent) 0 99%, transparent 100%), radial-gradient(circle 22px at 56% 5%, color-mix(in srgb, var(--green-700) 28%, transparent) 0 99%, transparent 100%), radial-gradient(circle 19px at 92% 92%, color-mix(in srgb, var(--gold) 30%, transparent) 0 99%, transparent 100%), radial-gradient(circle 30px at 32% 12%, color-mix(in srgb, var(--green-800) 30%, transparent) 0 99%, transparent 100%), radial-gradient(circle 42px at 76% 86%, color-mix(in srgb, var(--gold) 32%, transparent) 0 99%, transparent 100%), radial-gradient(circle 92px at 14% 82%, color-mix(in srgb, var(--green-700) 23%, transparent) 0 99%, transparent 100%), radial-gradient(circle 58px at 82% 18%, color-mix(in srgb, var(--gold-200) 65%, transparent) 0 99%, transparent 100%), linear-gradient(135deg, var(--parchment) 0%, var(--green-100) 52%, var(--canvas) 100%);
+	overflow: hidden;
+	border-bottom: 1px solid var(--line);
+	padding: 88px 0 92px;
+	max-width: 100%;
 }
 
 .hero::before,
 .hero::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    pointer-events: none;
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	pointer-events: none;
 }
 
 .hero::before {
-    top: 120px;
-    left: -190px;
-    width: 420px;
-    height: 420px;
-    background: color-mix(in srgb, var(--gold) 34%, transparent);
+	top: 120px;
+	left: -190px;
+	width: 420px;
+	height: 420px;
+	background: color-mix(in srgb, var(--gold) 34%, transparent);
 }
 
 .hero::after {
-    top: 70px;
-    right: -170px;
-    width: 330px;
-    height: 330px;
-    background: color-mix(in srgb, var(--green-800) 24%, transparent);
+	top: 70px;
+	right: -170px;
+	width: 330px;
+	height: 330px;
+	background: color-mix(in srgb, var(--green-800) 24%, transparent);
 }
 
 .hero-inner {
-    position: relative;
-    z-index: 1;
-    margin: auto;
-    max-width: 850px;
-    text-align: center;
-    width: min(850px, calc(100% - 48px));
+	position: relative;
+	z-index: 1;
+	margin: auto;
+	max-width: 850px;
+	text-align: center;
+	width: min(850px, calc(100% - 48px));
 }
 
 .hero-logo {
-    margin: 0 auto 26px;
-    width: 75%;
-    height: 75%;
-    aspect-ratio: 1;
+	margin: 0 auto 26px;
+	min-width: min(100%);
+	width: 100%;
+	height: auto;
+	aspect-ratio: 2.5;
+	object-fit: contain;
+	object-position: center;
+	mix-blend-mode: multiply;
 }
 
 .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 14px;
 }
 
 .split-hero > * {
-    min-width: 0;
-    max-width: 100%;
+	min-width: 0;
+	max-width: 100%;
 }
 
 .split-hero {
-    display: grid;
-    grid-template-columns: 1fr 0.8fr;
-    align-items: stretch;
-    gap: 28px;
+	display: grid;
+	grid-template-columns: 1fr 0.8fr;
+	align-items: stretch;
+	gap: 28px;
 }
 
 @media (max-width: 1080px) {
-    .split-hero {
-        grid-template-columns: 1fr;
-    }
+	.split-hero {
+		grid-template-columns: 1fr;
+	}
 
-    .hero {
-        padding: 58px 0;
-    }
+	.hero {
+		padding: 58px 0;
+	}
 }
 
 @media (max-width: 520px) {
-    .hero {
-        background:
-            radial-gradient(
-                circle 12px at 8% 10%,
-                color-mix(in srgb, var(--gold-200) 75%, transparent) 0 99%,
-                transparent 100%
-            ),
-            radial-gradient(
-                circle 15px at 57% 4%,
-                color-mix(in srgb, var(--green-700) 28%, transparent) 0 99%,
-                transparent 100%
-            ),
-            radial-gradient(
-                circle 12px at 94% 91%,
-                color-mix(in srgb, var(--gold) 30%, transparent) 0 99%,
-                transparent 100%
-            ),
-            radial-gradient(
-                circle 18px at 20% 7%,
-                color-mix(in srgb, var(--green-800) 30%, transparent) 0 99%,
-                transparent 100%
-            ),
-            radial-gradient(
-                circle 28px at 78% 93%,
-                color-mix(in srgb, var(--gold) 32%, transparent) 0 99%,
-                transparent 100%
-            ),
-            radial-gradient(
-                circle 92px at 14% 82%,
-                color-mix(in srgb, var(--green-700) 23%, transparent) 0 99%,
-                transparent 100%
-            ),
-            radial-gradient(
-                circle 58px at 82% 18%,
-                color-mix(in srgb, var(--gold-200) 65%, transparent) 0 99%,
-                transparent 100%
-            ),
-            linear-gradient(
-                135deg,
-                var(--parchment) 0%,
-                var(--green-100) 52%,
-                var(--canvas) 100%
-            );
-    }
+	.hero {
+		background: radial-gradient(circle 12px at 8% 10%, color-mix(in srgb, var(--gold-200) 75%, transparent) 0 99%, transparent 100%), radial-gradient(circle 15px at 57% 4%, color-mix(in srgb, var(--green-700) 28%, transparent) 0 99%, transparent 100%), radial-gradient(circle 12px at 94% 91%, color-mix(in srgb, var(--gold) 30%, transparent) 0 99%, transparent 100%), radial-gradient(circle 18px at 20% 7%, color-mix(in srgb, var(--green-800) 30%, transparent) 0 99%, transparent 100%), radial-gradient(circle 28px at 78% 93%, color-mix(in srgb, var(--gold) 32%, transparent) 0 99%, transparent 100%), radial-gradient(circle 92px at 14% 82%, color-mix(in srgb, var(--green-700) 23%, transparent) 0 99%, transparent 100%), radial-gradient(circle 58px at 82% 18%, color-mix(in srgb, var(--gold-200) 65%, transparent) 0 99%, transparent 100%), linear-gradient(135deg, var(--parchment) 0%, var(--green-100) 52%, var(--canvas) 100%);
+	}
 
-    .hero-inner {
-        width: calc(100% - 32px);
-    }
+	.hero-inner {
+		width: calc(100% - 32px);
+	}
 
-    .hero-logo {
-        width: min(240px, 75vw);
-        height: auto;
-    }
+	.hero-logo {
+		width: min(240px, 75vw);
+		height: auto;
+	}
 
-    .hero-actions .btn {
-        width: 100%;
-    }
+	.hero-actions .btn {
+		width: 100%;
+	}
 }
