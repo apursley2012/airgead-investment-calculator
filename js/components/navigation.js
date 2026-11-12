@@ -55,7 +55,7 @@ export function navigationMarkup(root, current) {
 		<a class="skip-link" href="#main-content">Skip to main content</a>
 		<header class="topbar">
 			<div class="wrap nav">
-				${brandMarkup(root, { showName: true })}
+				${brandMarkup(root, { light = true, showName = true })}
 
 				<nav class="links" aria-label="Primary navigation">
 					${navigationLinks}
