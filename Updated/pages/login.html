@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+  +----------------------------------------------------------------------------+
+  | Airgead Investment Calculator                                              |
+  | Purpose: Provides the clearly labeled demo sign-in form; it is not a       |
+  |          server- backed authentication page.                               |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+		<meta
+			name="referrer"
+			content="strict-origin-when-cross-origin" />
+		<meta
+			content="width=device-width,initial-scale=1"
+			name="viewport" />
+		<meta
+			content="Alysha Pursley"
+			name="author" />
+		<meta
+			content="Use Airgead demo sign-in mode without creating an account or sending credentials to a server."
+			name="description" />
+		<title>Sign In | Airgead</title>
+		<link
+			href="../css/shared.css"
+			rel="stylesheet" />
+		<link
+			href="../css/pages/login.css"
+			rel="stylesheet" />
+	</head>
+	<body>
+		<div
+			class="site-shell"
+			data-shell="">
+			<main
+				id="main-content"
+				tabindex="-1"
+				class="site-main texture">
+				<section class="wrap">
+					<article class="card login-card">
+						<img
+							alt=""
+							class="login-logo"
+							src="../assets/logo/airgead-mark.png" />
+						<h1 class="login-title text-center">
+							Demo sign-in
+						</h1>
+						<p class="text-center text-muted">
+							This page demonstrates a sign-in interface;
+							it does not create an account or verify your
+							identity. Enter a sample email address and a
+							fictional password. Do not use your real
+							password.
+						</p>
+						<form
+							autocomplete="off"
+							class="login-form"
+							id="loginForm">
+							<div class="field">
+								<label for="email">Email address</label>
+								<input
+									class="full-width"
+									autocomplete="off"
+									id="email"
+									maxlength="254"
+									placeholder="you@example.com"
+									required=""
+									type="email" />
+							</div>
+							<div class="field">
+								<label for="password">Password</label>
+								<input
+									class="full-width"
+									autocomplete="off"
+									id="password"
+									maxlength="128"
+									placeholder="••••••••"
+									required=""
+									type="password" />
+							</div>
+							<div class="demo-note">
+								<strong>Demo mode:</strong>
+								No account is created. Airgead does not
+								store or transmit the entered email or
+								password. Only a temporary demo
+								indicator is kept in this browser tab;
+								use Sign Out to clear it.
+							</div>
+							<button
+								class="btn btn-primary"
+								type="submit">
+								Sign In
+							</button>
+						</form>
+					</article>
+				</section>
+			</main>
+		</div>
+		<script
+			src="../js/components/shell.js"
+			type="module"></script>
+		<script
+			src="../js/pages/login.js"
+			type="module"></script>
+	</body>
+</html>
