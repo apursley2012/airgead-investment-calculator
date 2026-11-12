@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+  +----------------------------------------------------------------------------+
+  | Airgead Investment Calculator                                              |
+  | Purpose: Provides the browser demo's investment input form and live        |
+  |          projection interface.                                             |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+		<meta
+			name="referrer"
+			content="strict-origin-when-cross-origin" />
+		<meta
+			content="width=device-width,initial-scale=1"
+			name="viewport" />
+		<meta
+			content="Alysha Pursley"
+			name="author" />
+		<meta
+			content="Calculate projected investment growth with and without recurring monthly deposits."
+			name="description" />
+		<title>Calculator | Airgead</title>
+		<link
+			href="../css/shared.css"
+			rel="stylesheet" />
+		<link
+			href="../css/pages/calculator.css"
+			rel="stylesheet" />
+	</head>
+	<body>
+		<div
+			class="site-shell"
+			data-shell="">
+			<main
+				id="main-content"
+				tabindex="-1"
+				class="site-main calculator-stage texture">
+				<div class="wrap">
+					<h1 class="sr-only">Calculate investment growth</h1>
+					<div class="big-number">
+						<div class="label">With monthly deposits</div>
+						<div
+							class="amount"
+							id="displayWith">
+							$0
+						</div>
+					</div>
+					<form
+						class="control-deck"
+						id="calculatorForm"
+						aria-label="Investment inputs">
+						<div
+							class="investment-fields"
+							data-investment-fields=""></div>
+						<button
+							class="btn btn-primary"
+							type="submit">
+							View Details
+						</button>
+					</form>
+					<div class="quick-stats">
+						<div class="quick-stat">
+							<span>Without deposits</span>
+							<strong id="withoutDeposits">$0</strong>
+						</div>
+						<div class="quick-stat">
+							<span>Difference</span>
+							<strong id="difference">$0</strong>
+						</div>
+					</div>
+					<div class="text-center">
+						<div
+							class="notice"
+							id="noticeText"
+							role="status"
+							aria-live="polite"
+							aria-atomic="true">
+							Monthly deposits change the final balance.
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script
+			src="../js/components/shell.js"
+			type="module"></script>
+		<script
+			src="../js/pages/calculator.js"
+			type="module"></script>
+	</body>
+</html>

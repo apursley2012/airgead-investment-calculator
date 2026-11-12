@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--
+  +----------------------------------------------------------------------------+
+  | Airgead Investment Calculator                                              |
+  | Purpose: Displays the active browser calculation as summary metrics, a     |
+  |          chart, a year-by-year table, save controls, and CSV export.       |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  +----------------------------------------------------------------------------+
+-->
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+		<meta
+			name="referrer"
+			content="strict-origin-when-cross-origin" />
+		<meta
+			content="width=device-width,initial-scale=1"
+			name="viewport" />
+		<meta
+			content="Alysha Pursley"
+			name="author" />
+		<meta
+			content="Review year-by-year Airgead investment projection results and export the calculation as CSV."
+			name="description" />
+		<title>Results | Airgead</title>
+		<link
+			href="../css/shared.css"
+			rel="stylesheet" />
+		<link
+			href="../css/pages/results.css"
+			rel="stylesheet" />
+	</head>
+	<body>
+		<div
+			class="site-shell"
+			data-shell="">
+			<main
+				id="main-content"
+				tabindex="-1"
+				class="site-main">
+				<div class="wrap page-head">
+					<div class="toolbar">
+						<a
+							class="btn btn-ghost"
+							href="calculator.html"
+							>← Back to Calculator</a
+						>
+						<div class="toolbar">
+							<button
+								class="btn btn-soft"
+								id="savePlan"
+								type="button">
+								Save Plan
+							</button>
+							<button
+								class="btn btn-primary"
+								id="exportCsv"
+								type="button">
+								Export CSV
+							</button>
+						</div>
+					</div>
+					<h1>Investment growth results</h1>
+					<p class="lead">
+						Review the projected final balance, your total
+						contributions, and the interest earned. The chart
+						and yearly tables show how the results develop
+						over time.
+					</p>
+				</div>
+				<section class="wrap section section-flush-top">
+					<div class="summary-layout">
+						<div>
+							<section class="summary-card">
+								<h2 class="meta">
+									Projected balance with deposits
+								</h2>
+								<div
+									class="money"
+									id="finalWith">
+									$0
+								</div>
+								<div class="summary-row">
+									<span>Total principal</span>
+									<strong id="totalPrincipal"
+										>$0</strong
+									>
+								</div>
+								<div class="summary-row">
+									<span>Total interest</span>
+									<strong id="totalInterest"
+										>$0</strong
+									>
+								</div>
+							</section>
+							<article class="card mini-card mt-18">
+								<h2 class="eyebrow without-heading">
+									Projected balance without deposits
+								</h2>
+								<p
+									class="final-without"
+									id="finalWithout">
+									$0
+								</p>
+								<p id="withoutText">
+									Growth of the starting balance
+									without additional contributions.
+								</p>
+							</article>
+						</div>
+						<article class="card chart-card">
+							<h2 class="card-heading">
+								Projected growth by year
+							</h2>
+							<div class="chart-wrap">
+								<p
+									id="growthChartDescription"
+									class="sr-only">
+									Compare the two projected balances
+									in the chart, then use the yearly
+									tables to review contributions and
+									interest for individual years.
+								</p>
+								<canvas
+									id="growthChart"
+									role="img"
+									aria-label="Year-by-year growth with and without monthly deposits"
+									aria-describedby="growthChartDescription">
+								</canvas>
+							</div>
+						</article>
+					</div>
+					<div
+						data-report-table=""
+						data-title="Balance and interest without additional monthly deposits"
+						data-body-id="withoutDepositsReport"></div>
+					<div
+						data-report-table=""
+						data-title="Balance and interest with additional monthly deposits"
+						data-body-id="withDepositsReport"></div>
+				</section>
+			</main>
+		</div>
+		<script
+			src="../js/components/shell.js"
+			type="module"></script>
+		<script
+			src="../js/pages/results.js"
+			type="module"></script>
+	</body>
+</html>

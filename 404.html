@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--
+  +----------------------------------------------------------------------------+
+  | Airgead Investment Calculator                                              |
+  | Purpose: Deployment-path-safe, custom GitHub Pages 404 page.               |
+  | Author: Alysha Pursley                                                     |
+  | Copyright (c) 2026 Alysha Pursley.                                         |
+  +----------------------------------------------------------------------------+
+-->
+<html
+	lang="en"
+	data-not-found="true">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src &#x27;self&#x27;; script-src &#x27;self&#x27; &#x27;sha256-lNX7jHFC5xyzGwBMYdVpRzVE1hc0/tWOHShEGLVoM7o=&#x27;; style-src &#x27;self&#x27; https://fonts.googleapis.com &#x27;sha256-BdSAfB2vhekrarQdoVAUmOUdapKduv2Ud+X6KVY9e6U=&#x27;; font-src &#x27;self&#x27; https://fonts.gstatic.com; img-src &#x27;self&#x27; data:; connect-src &#x27;self&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;self&#x27;; form-action &#x27;self&#x27;" />
+		<meta
+			name="referrer"
+			content="strict-origin-when-cross-origin" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1" />
+		<meta
+			name="author"
+			content="Alysha Pursley" />
+		<meta
+			name="description"
+			content="The requested Airgead page could not be found. Return to the calculator or explore the project." />
+		<meta
+			name="robots"
+			content="noindex" />
+		<title>Page Not Found | Airgead</title>
+		<style>
+			:root {
+				color-scheme: light;
+				font-family: Inter, system-ui, sans-serif;
+				background: #f5f3f0;
+				color: #16251e;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				margin: 0;
+			}
+
+			.site-shell {
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.site-main {
+				flex: 1;
+				display: grid;
+				place-items: center;
+				padding: 40px 16px;
+			}
+
+			.not-found-card {
+				width: min(100%, 760px);
+				border: 1px solid #e7dfd0;
+				border-radius: 28px;
+				padding: clamp(26px, 6vw, 64px);
+				background: #fffefb;
+				text-align: center;
+			}
+
+			.not-found-card h1 {
+				color: #0b3f29;
+				font:
+					700 clamp(2.4rem, 8vw, 5.2rem) / 1.05 Georgia,
+					serif;
+			}
+
+			.not-found-card .lead {
+				max-width: 560px;
+				margin: 0 auto 28px;
+			}
+
+			.not-found-actions {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 12px;
+			}
+
+			.not-found-actions .btn {
+				display: inline-flex;
+				justify-content: center;
+				border-radius: 999px;
+				padding: 12px 18px;
+				background: #0f5132;
+				color: #fffefb;
+				font-weight: 700;
+				text-decoration: none;
+			}
+
+			.not-found-actions .btn-soft {
+				border: 1px solid #e7dfd0;
+				background: white;
+				color: #0f5132;
+			}
+
+			a:focus-visible {
+				outline: 3px solid #0f5132;
+				outline-offset: 3px;
+			}
+
+			@media (max-width: 520px) {
+				.not-found-actions {
+					flex-direction: column;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div
+			class="site-shell"
+			data-shell>
+			<main
+				id="main-content"
+				class="site-main"
+				tabindex="-1">
+				<section class="wrap section not-found">
+					<div class="card not-found-card">
+						<p class="eyebrow">We couldn't find that page</p>
+						<h1>404. This page isn't here.</h1>
+						<p class="lead">
+							The address may have changed or been entered
+							incorrectly. Your saved plans, if any, are
+							still kept in this browser.
+						</p>
+						<div class="not-found-actions">
+							<a
+								id="home-link"
+								class="btn btn-primary"
+								href="index.html"
+								>Return Home</a
+							>
+							<a
+								id="calculator-link"
+								class="btn btn-soft"
+								href="pages/calculator.html"
+								>Open Calculator</a
+							>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+		<script type="module">
+			const directories = [];
+			let directory = new URL(".", location.href).pathname;
+
+			while (true) {
+				directories.push(directory);
+				if (directory === "/") break;
+				directory = new URL(
+					"../",
+					new URL(directory, location.origin),
+				).pathname;
+			}
+
+			for (const path of directories) {
+				const siteRoot = new URL(path, location.origin);
+				try {
+					const response = await fetch(
+						new URL("css/shared.css", siteRoot),
+						{ method: "HEAD" },
+					);
+					if (!response.ok) continue;
+
+					for (const [id, relativePath] of [
+						["home-link", "index.html"],
+						["calculator-link", "pages/calculator.html"],
+					]) {
+						document.getElementById(id).href = new URL(
+							relativePath,
+							siteRoot,
+						).href;
+					}
+
+					for (const stylePath of [
+						"css/shared.css",
+						"css/pages/not-found.css",
+					]) {
+						const stylesheet = document.createElement("link");
+						stylesheet.rel = "stylesheet";
+						stylesheet.href = new URL(
+							stylePath,
+							siteRoot,
+						).href;
+						document.head.append(stylesheet);
+					}
+
+					await import(
+						new URL("js/components/shell.js", siteRoot).href
+					);
+					break;
+				} catch {
+					// Keep the self-contained 404 message readable if the static host is unreachable.
+				}
+			}
+		</script>
+	</body>
+</html>
