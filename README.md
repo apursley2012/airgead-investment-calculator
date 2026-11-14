@@ -7,7 +7,7 @@ Date: August 2026
 
 <div align="center">
 
-<img src="assets/logo/airgead-mark.png" alt="Airgead Investment Calculator logo" width="85%" height=“auto”>
+<img src="assets/logo/airgead-mark.png" alt="Airgead Banking wordmark with Celtic spiral emblem" width="85%">
 
 <h1>Airgead Investment Calculator 💰</h1>
 
@@ -91,7 +91,7 @@ I created **Airgead Investment Calculator** to help people understand how consis
 
 
 
-I designed **Airgead Investment Calculator** around a restrained financial-planning design instead of a high-gloss fintech look. Navy provides structure, teal identifies interactive and calculated information, gold adds selective emphasis, and cream and paper surfaces keep forms, projections, tables, and explanations easy to read. The layout is centered on entering assumptions, comparing outcomes, and understanding the effect of recurring contributions, so the visual treatment supports the calculations rather than competing with them.
+I designed **Airgead Investment Calculator** around a restrained financial-planning design instead of a high-gloss fintech look. Forest green provides structure and identifies primary controls, gold adds selective emphasis, and cream and paper surfaces keep forms, projections, tables, and explanations easy to read. The layout is centered on entering assumptions, comparing outcomes, and understanding the effect of recurring contributions, so the visual treatment supports the calculations rather than competing with them.
 
 </details>
 
@@ -104,22 +104,29 @@ I designed **Airgead Investment Calculator** around a restrained financial-plann
 
 
 
-I pulled the palette below directly from the current project stylesheet `css/styles.css`.
+I pulled the palette below directly from the current project stylesheet `css/shared.css`.
 
-Each row lists every interface-use category identified for that exact color value in the documented stylesheet analysis. When one hex value is reused for several jobs, I keep all of those uses together in the same row instead of reducing it to a single generic label.
+Each row identifies a color defined in the current stylesheet and its principal uses in the interface.
 
-| Hex | Color Name | Complete Use in the Interface |
+| Hex | CSS token / color | Specific use in the interface |
 | --- | --- | --- |
-| `#213243` | Ink | Primary body text and structural contrast |
-| `#17324D` | Navy | Primary brand color; headers; and strong interface areas |
-| `#0F8B8D` | Teal | Primary interactive and calculated-data accent |
-| `#0A6F72` | Deep Teal | Darker teal states and supporting emphasis |
-| `#D6A94B` | Gold | Selective financial highlights and decorative emphasis |
-| `#F7F1E3` | Cream | Main warm background |
-| `#FFFDF7` | Paper | Cards; forms; tables; and light content surfaces |
-| `#DFEEE9` | Mint | Soft supporting panels and comparison areas |
-| `#C9D8D4` | Line | Borders and separators |
-| `#64748B` | Muted Slate | Secondary text and explanatory copy |
+| `#004f12` | `--airgead-green` · Airgead green | Typed Airgead Banking name in the shared navigation brand. |
+| `#082d1d` | `--green-950` · Deep forest | Footer background, keyboard-only skip-link background, and deep shadow tones. |
+| `#0b3f29` | `--green-900` · Heading green | Main H1 and H2 headings across the site. |
+| `#0f5132` | `--green-800` · Primary green | Primary buttons, form labels, focus outlines, active navigation text, positive figures, and article links. |
+| `#166b42` | `--green-700` · Accent green | Small uppercase section labels and hover state for primary buttons. |
+| `#dfeee5` | `--green-100` · Pale sage | Feature icon backgrounds and the homepage's green gradient stop. |
+| `#c8a24a` | `--gold` · Gold | Article callout borders, focused input border treatment, and hero accents. |
+| `#ead9a6` | `--gold-200` · Light gold | Footer section headings, focus treatment in the dark footer, and hero accents. |
+| `#f5f3f0` | `--canvas` · Warm gray | Standard page background and the hero gradient's neutral end. |
+| `#fbf7ed` | `--parchment` · Cream | Light-on-dark button text, article callout backgrounds, and the hero gradient's warm start. |
+| `#fffefb` | `--paper` · Off-white | Default shared-card background. |
+| `#ffffff` | `--white` · White | Form input backgrounds, soft buttons, and light table surfaces. |
+| `#16251e` | `--ink` · Dark ink | Default body and input text; also used in chart annotations. |
+| `#656d67` | `--muted` · Muted gray-green | Less prominent supporting text and article metadata. |
+| `#e7dfd0` | `--line` · Warm border | Navigation divider, input borders, cards, table-row dividers, and soft-button outlines. |
+
+Additional alpha-hex values in the CSS provide translucent text, shadows, borders, and accents. Those are variants of the design colors, not separate primary palette entries.
 
 </details>
 
@@ -136,7 +143,14 @@ Click any preview image in the repository screenshot folder to open the full-siz
 #### 🖼️ Screenshot Gallery
 
 
-The gallery uses paired, centered images when screenshots are present. Keep screenshots under `images/screenshots/` and use names such as `airgead-investment-calculator-screenshot-01.png`, `airgead-investment-calculator-screenshot-02.png`, and so on. I have not invented image filenames that were not verified in the current project source.
+These two screenshots show the original C++ console program and its annual balance and interest reports.
+
+<div align="center">
+
+<a href="assets/screenshots/airgead-console-screenshot-1.png"><img src="assets/screenshots/airgead-console-screenshot-1.png" alt="C++ console output for a ten-year investment calculation" width="48%"></a>
+<a href="assets/screenshots/airgead-console-screenshot-2.png"><img src="assets/screenshots/airgead-console-screenshot-2.png" alt="C++ console output for a five-year investment calculation" width="48%"></a>
+
+</div>
 
 </details>
 
@@ -151,12 +165,12 @@ The gallery uses paired, centered images when screenshots are present. Keep scre
 
 *   **Calculate compound growth from user-supplied investment inputs**
 *   **Compare balances with and without monthly deposits**
-*   **Display year-by-year ending balance and interest earned**
+*   **Include year-by-year report tables for ending balances and interest (the live Results page currently has a JavaScript import issue)**
 *   **Validate calculator inputs before producing results**
-*   **Save planning scenarios in the browser**
-*   **Reopen and compare saved plans**
+*   **Save planning scenarios in browser storage (the current Results-page import issue blocks its save control until fixed)**
+*   **Reopen or delete saved plans**
 *   **Provide a How It Works explanation, case study, and articles**
-*   **Run entirely as a static GitHub Pages application**
+*   **Run the browser version on static GitHub Pages hosting; the original C++ application runs separately**
 
 </details>
 
@@ -169,10 +183,14 @@ The gallery uses paired, centered images when screenshots are present. Keep scre
 
 
 
+*   **C++17 (original console application)**
+
 *   **HTML**
 *   **CSS**
 *   **JavaScript**
 *   **Modular calculator JavaScript**
+*   **Canvas API for comparison and growth charts**
+
 *   **Local Storage for saved plans**
 *   **GitHub Pages**
 
@@ -212,9 +230,9 @@ Open the published project here:
 
 
 1. Clone or download the repository.
-2. Keep the existing folder structure intact so the page can still find its styles, scripts, data, and assets.
-3. Open the root `index.html` for static projects, or follow the project-specific runtime instructions when a backend/source application is included.
-4. Before I publish changes, I check the main workflow, navigation, saved browser data where it applies, and the responsive layout.
+2. Keep the repository structure intact so the pages can find their styles, scripts, and images.
+3. For the browser site, run `python3 -m http.server 8000` from the repository root, then open `http://localhost:8000/`. This is a local static server, not an application backend.
+4. To build the original C++ program, run `g++ -std=c++17 -Wall -Wextra -Wpedantic airgead_banking_app.cpp investment.cpp -o airgead` from `Original/`, then run `./airgead`.
 
 </details>
 
@@ -225,7 +243,7 @@ Open the published project here:
 
 
 
-For the static/public portion, keep `index.html` at the repository root, use relative asset paths, then enable **Settings → Pages → Deploy from a branch → main → / (root)**. Projects that include Python, Node, MongoDB, authentication, browser automation, or another server runtime still need an appropriate backend host for those server-dependent features.
+For the static/public portion, keep `index.html` at the repository root, use relative asset paths, then enable **Settings → Pages → Deploy from a branch → main → / (root)**. The `Original/` C++ console program is not executed by GitHub Pages; only the static HTML, CSS, and JavaScript browser site is published.
 
 </details>
 
@@ -238,7 +256,7 @@ For the static/public portion, keep `index.html` at the repository root, use rel
 
 
 
-Start with the main page and follow the project’s primary workflow. The interface is intended to be usable without reading the source first, while the case studies, articles, documentation, and source folders provide the deeper implementation context. Where browser storage is used, saved information belongs to that browser/device unless the project explicitly includes a shared backend.
+On Calculator, enter the starting balance, monthly deposit, annual interest rate, and years to see the live projection. Compare lets me test two sets of assumptions. Saved Plans stores named scenarios in the current browser and lets me reopen or delete them. Results is intended to display annual tables, charts, and export controls, but its current live JavaScript import is broken (see Project Scope and Limitations).
 
 </details>
 
@@ -262,16 +280,23 @@ Start with the main page and follow the project’s primary workflow. The interf
 
 | Page / Area | Purpose |
 | --- | --- |
-| `index.html` | Project landing page |
-| `pages/calculator.html` | Investment input workflow |
-| `pages/results.html` | Calculated year-by-year results |
-| `pages/compare.html` | Scenario comparison view |
-| `pages/saved-plans.html` | Saved browser-side investment plans |
-| `pages/how-it-works.html` | Compound-interest explanation |
-| `pages/case-study.html` | Detailed project case study |
-| `pages/articles.html` | Supporting articles |
-| `pages/blog.html` | Writing/blog page |
-| `pages/login.html` | Account-style interface page |
+| `index.html` | Homepage with the Airgead Banking hero image, short feature cards, and links to the calculator, calculation guide, and case study. |
+| `404.html` | Custom not-found message with home/calculator links and a script that resolves GitHub Pages repository subpaths for missing URLs. |
+| `pages/calculator.html` | Starting balance, monthly deposit, annual rate, and years controls, populated by JavaScript; live projected totals and **View Details** form. |
+| `pages/results.html` | Markup for projected balances, total principal, total interest, the growth chart, two annual report tables, **Save Plan**, and **Export CSV**. Its controller currently has an unresolved report-table import. |
+| `pages/compare.html` | Two independent sets of investment inputs, final balance summaries, and a chart dividing each result into contributed principal and interest. |
+| `pages/saved-plans.html` | Container populated with validated saved-plan cards, including **View Results** and confirmed **Delete** actions; an empty state links back to Calculator. |
+| `pages/how-it-works.html` | Step-by-step explanation of input assumptions, deposit-before-interest monthly compounding, annual results, comparison, and browser-local saving. |
+| `pages/articles.html` | Index linking to the two substantive financial-planning articles. |
+| `pages/article-monthly-deposits.html` | Article explaining principal versus earned interest, deposit timing, annual reports, and controlled scenario comparisons. |
+| `pages/article-budget-before-investing.html` | Article on choosing a realistic monthly contribution after expenses, irregular costs, emergency savings, debt, and savings goals. |
+| `pages/blog.html` | Three development-journal sections covering the browser version, explaining results clearly, and handling browser-local data. |
+| `pages/case-study.html` | Explanation of project goals, C++ and browser architecture, calculation rules, visual design, storage, accessibility, testing, and technical trade-offs. |
+| `pages/login.html` | Labeled demonstration sign-in form that records only a temporary session flag; it creates no user account. |
+| `pages/privacy.html` | Notice about locally stored plans and calculations, demo session state, font requests, hosting, and browser-data clearing. |
+| `pages/terms.html` | **Current repository issue:** This file contains the Saved Plans page markup and script instead of Terms of Use content. The footer's Terms link therefore points to the wrong page. |
+| `pages/disclaimer.html` | Financial-model assumptions, omitted real-world factors, and the distinction between illustrations and advice. |
+| `pages/accessibility.html` | Accessibility features, known testing limitations, and a means to report usability barriers. |
 
 </details>
 
@@ -282,7 +307,61 @@ Start with the main page and follow the project’s primary workflow. The interf
 
 
 
-The repository separates the public interface from supporting source and documentation where the project needs that distinction. The important rule is that **Airgead Investment Calculator should be documented as the project it is**, not as a generic theme or one-size-fits-all site. Files that implement the main workflow belong with the application, while case studies, articles, source history, data, or backend code are documented according to their real role.
+The site shares UI behavior without moving ordinary article or page copy into large JavaScript data objects. Each CSS page file loads after `css/shared.css` on its corresponding page.
+
+**Stylesheets**
+
+| File | Specific responsibility |
+| --- | --- |
+| `css/shared.css` | Design tokens, body/display fonts, navigation and footer, reusable cards/buttons, labels and inputs, tables, layout utilities, focus styles, and shared responsive breakpoints. |
+| `css/pages/index.css` | Homepage hero background and circular accents, hero wordmark sizing, action layout, and mobile hero adjustments. |
+| `css/pages/calculator.css` | Large projected-balance display, investment form deck, and quick-stat arrangement. |
+| `css/pages/results.css` | Results-page summary cards, chart space, report tables, and save/export toolbar layout. |
+| `css/pages/compare.css` | Two-scenario cards, comparison metric tiles, and chart/responsive arrangement. |
+| `css/pages/saved-plans.css` | Saved-plan card grid, delete/open actions, and empty-state presentation. |
+| `css/pages/login.css` | Demo sign-in card spacing, logo size, form layout, and consistent full-width inputs. |
+| `css/pages/case-study.css` | Case-study-specific logo panel and image presentation. |
+| `css/pages/not-found.css` | Shared-theme presentation for the 404 page when the custom page resolves the site root. |
+
+**Shared JavaScript components**
+
+| File | Specific responsibility |
+| --- | --- |
+| `js/components/brand.js` | Generates the shared home link with the symbol-only Airgead logo and separately rendered brand name. |
+| `js/components/navigation.js` | Builds desktop/mobile navigation, active-page indicators, keyboard menu behavior, and demo sign-out action. |
+| `js/components/footer.js` | Creates the footer's brand, tool and project links, and privacy/terms/disclaimer/accessibility links. The current Terms destination exists but contains the wrong page content. |
+| `js/components/shell.js` | Inserts the shared navigation, footer, and toast region on pages and resolves page-relative paths for normal and 404 routes. |
+| `js/components/page-header.js` | Builds repeated eyebrow, heading, and introductory text from attributes on individual page elements. |
+| `js/components/investment-fields.js` | Produces labeled starting balance, monthly deposit, annual rate, and years inputs for Calculator and both Compare scenarios. |
+| `js/components/plan-card.js` | Builds saved-plan cards using text nodes for user-supplied names, plus date, balance, open, and delete controls. |
+| `js/components/report-table.js` | **Current repository issue:** contains a duplicate of `plan-card.js` instead of the expected `renderReportTables()` export. The Results controller depends on that missing export. |
+| `js/components/toast.js` | Creates an accessible live-status region and displays brief feedback such as save or storage-error messages. |
+
+**Calculation, data, and page controllers**
+
+| File | Specific responsibility |
+| --- | --- |
+| `js/lib/calculator.js` | Validates and normalizes numeric inputs, calculates 12 monthly steps per year with deposits before interest, returns annual values, and formats currency. |
+| `js/lib/charts.js` | Draws the yearly growth lines and the scenario principal/interest comparison with the Canvas 2D API. |
+| `js/lib/csv-export.js` | Escapes CSV fields, protects spreadsheet-leading formula characters, creates a browser Blob, and triggers a file download. |
+| `js/lib/plan-storage.js` | Reads/writes current calculations and saved plans, rejects invalid records, recalculates stored results to check integrity, and manages plan IDs. |
+| `js/pages/calculator.js` | Connects form inputs to the live calculation, handles invalid projections, animates the displayed total, and saves a calculation before Results navigation. |
+| `js/pages/compare.js` | Reads Scenario A/B forms independently, recalculates totals, displays input errors, and redraws the comparison chart. |
+| `js/pages/results.js` | Populates balances and yearly rows, draws the growth chart, and handles plan saving and CSV export; currently blocked by the report-table import mismatch. |
+| `js/pages/saved-plans.js` | Loads valid plans, renders cards/empty state, reopens saved inputs, confirms deletion, and refreshes on another tab's storage changes. |
+| `js/pages/login.js` | Handles demonstration sign-in by setting a temporary `sessionStorage` indicator and navigating to Saved Plans without saving credentials. |
+
+**Original C++ source and project notices**
+
+| File | Specific responsibility |
+| --- | --- |
+| `Original/airgead_banking_app.cpp` | Console entry point; collects validated inputs and runs both annual investment reports. |
+| `Original/investment.h` | Declares the investment model, result structure, and calculation interface. |
+| `Original/investment.cpp` | Implements validation, monthly compounding, and annual report formatting for the original application. |
+| `Original/tests/investment_test.cpp` | Contains deterministic C++ regression assertions for deposit timing, zero-rate results, invalid inputs, and numeric limits; this file is present on the current GitHub branch. |
+| `Original/README.md` | Documents the console program, build commands, required calculations, and its relationship to the browser site. |
+| `LICENSE`, `Original/LICENSE` | Proprietary copyright and reuse terms for project-owned contributions. |
+| `THIRD_PARTY_NOTICES.md` | Identifies externally loaded Inter and Fraunces fonts and reproduces the applicable SIL Open Font License. |
 
 </details>
 
@@ -296,17 +375,77 @@ The repository separates the public interface from supporting source and documen
 ```text
 airgead-investment-calculator/
 ├── README.md
+├── LICENSE
+├── THIRD_PARTY_NOTICES.md
 ├── index.html
-├── pages/calculator.html
-├── pages/results.html
-├── pages/compare.html
-├── pages/saved-plans.html
-├── pages/how-it-works.html
-├── pages/case-study.html
-└── pages/articles.html
+├── 404.html
+├── assets/
+│   ├── logo/
+│   │   ├── airgead-mark.png
+│   │   └── airgead-mark-light.png
+│   └── screenshots/
+│       ├── airgead-console-screenshot-1.png
+│       └── airgead-console-screenshot-2.png
+├── css/
+│   ├── shared.css
+│   └── pages/
+│       ├── index.css
+│       ├── calculator.css
+│       ├── results.css
+│       ├── compare.css
+│       ├── saved-plans.css
+│       ├── login.css
+│       ├── case-study.css
+│       └── not-found.css
+├── js/
+│   ├── components/
+│   │   ├── brand.js
+│   │   ├── navigation.js
+│   │   ├── footer.js
+│   │   ├── shell.js
+│   │   ├── page-header.js
+│   │   ├── investment-fields.js
+│   │   ├── plan-card.js
+│   │   ├── report-table.js
+│   │   └── toast.js
+│   ├── lib/
+│   │   ├── calculator.js
+│   │   ├── charts.js
+│   │   ├── csv-export.js
+│   │   └── plan-storage.js
+│   └── pages/
+│       ├── calculator.js
+│       ├── compare.js
+│       ├── results.js
+│       ├── saved-plans.js
+│       └── login.js
+├── pages/
+│   ├── calculator.html
+│   ├── results.html
+│   ├── compare.html
+│   ├── saved-plans.html
+│   ├── how-it-works.html
+│   ├── articles.html
+│   ├── article-monthly-deposits.html
+│   ├── article-budget-before-investing.html
+│   ├── blog.html
+│   ├── case-study.html
+│   ├── login.html
+│   ├── privacy.html
+│   ├── terms.html
+│   ├── disclaimer.html
+│   └── accessibility.html
+└── Original/
+    ├── README.md
+    ├── LICENSE
+    ├── airgead_banking_app.cpp
+    ├── investment.cpp
+    ├── investment.h
+    └── tests/
+        └── investment_test.cpp
 ```
 
-This tree highlights the major documented areas rather than inventing files that were not verified.
+The tree reflects the current public `main` branch, including the static website at the repository root and the separate C++ source in `Original/`.
 
 </details>
 
@@ -362,9 +501,12 @@ The public interface should remain keyboard-navigable, readable at common mobile
 
 
 
-**Airgead Investment Calculator** is documented as its own project. Supporting case studies, articles, source history, static presentation layers, or backend/runtime folders are parts of this repository only when they help explain or run this project. They should not be described as separate replacement projects.
+This repository contains **one project with two implementations**:
 
-Where this repository contains both a static GitHub Pages layer and source that requires another runtime, the two are related but not interchangeable: the static layer provides the public experience that can run in a browser, while the source/runtime layer preserves functionality that GitHub Pages cannot execute directly.
+- **`Original/`** contains the C++ console application required by the Airgead Banking/Chada Tech scenario.
+- The **repository root** contains the interactive static website and its project material.
+
+The C++ program generates console tables. The browser application implements the calculation separately, provides visual comparison tools, and stores plans in the browser. GitHub Pages only hosts the static site. The two implementations should not be mistaken for the same runtime.
 
 </details>
 
@@ -377,7 +519,13 @@ Where this repository contains both a static GitHub Pages layer and source that 
 
 
 
-This README separates what the published browser version can do from functionality that belongs to a backend, database, native application, notebook, or other runtime. Static hosting limitations are stated where they materially affect the project. The documentation should not imply that GitHub Pages is providing server-side authentication, Python execution, MongoDB access, SMS delivery, or another service it cannot actually run.
+- **Educational calculations:** A constant-rate model, not actual investment performance or personalized financial advice.
+- **Static-only hosting:** No backend, bank integration, protected account, remote database, or server-side calculations.
+- **Local storage:** Saved plans are available only in the same browser profile; clearing site data can remove them. The demo sign-in indicator is not authentication.
+- **Browser-dependent features:** JavaScript and browser storage must be available for calculation history and plan management. CSV export creates a local download.
+- **Current report-table source mismatch:** As of the November 2026 source check, `js/components/report-table.js` duplicates the saved-plan card module and lacks `renderReportTables()`, which `js/pages/results.js` imports. This needs a code correction before the Results workflow can be verified as functional.
+- **Incorrect Terms page:** `pages/terms.html` currently contains Saved Plans markup rather than Terms of Use. The proprietary license remains available at `LICENSE`, but the public Terms page needs its own correct content.
+- **Testing boundaries:** Source review and inspecting accessible published pages do not establish cross-browser, end-to-end, or WCAG certification. The original C++ source has deterministic regression tests in `Original/tests/`, while no root-level Node test suite was verified in the live branch.
 
 </details>
 
@@ -391,7 +539,7 @@ This README separates what the published browser version can do from functionali
 
 
 *   Add more comparison charts for long investment periods
-*   Add export/print support for saved plans and annual tables
+*   Add print-ready layouts for saved plans and annual tables
 *   Expand input guidance for edge cases such as zero monthly deposits
 *   Add automated tests around compounding and rounding behavior
 
@@ -406,7 +554,7 @@ This README separates what the published browser version can do from functionali
 
 
 
-Contributions, bug reports, and practical improvement suggestions are welcome when they preserve the existing project direction and do not replace its identity with a generic redesign.
+Bug reports and practical improvement suggestions are welcome through GitHub Issues. The proprietary license does not grant permission to redistribute or reuse the project-owned source.
 
 </details>
 
@@ -441,7 +589,7 @@ Feature requests should explain the user problem the addition would solve and ho
 
 
 
-No license terms are assumed here. If the repository includes a `LICENSE` file, that file controls reuse. If it does not, normal copyright applies and permission should not be inferred from the repository being public.
+Copyright © 2026 Alysha Pursley. The repository has a proprietary [`LICENSE`](LICENSE), with a separate [`Original/LICENSE`](Original/LICENSE) for the C++ application. Public availability does not grant an open-source reuse license. Third-party fonts have their own licenses described in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
 </details>
 
@@ -468,7 +616,7 @@ No license terms are assumed here. If the repository includes a `LICENSE` file, 
 <summary><h2><strong>Attribution ℹ️</strong></h2></summary>
 
 
-Project documentation and original project materials are credited to their respective sources where applicable.
+The original application follows the Airgead Banking client scenario for Chada Tech. The website loads Inter and Fraunces through Google Fonts; their designers, copyright notices, and SIL Open Font License 1.1 are identified in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
 </details>
 
