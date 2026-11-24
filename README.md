@@ -7,7 +7,7 @@ Date: August 2026
 
 <div align="center">
 
-<img src="assets/logo/airgead-mark.png" alt="Airgead Banking wordmark with Celtic spiral emblem" width="2350px" height="auto">
+<img src="assets/logo/airgead-mark.png" alt="Airgead Banking wordmark with Celtic spiral emblem" width="auto" height="512px">
 
 <h1>Airgead Investment Calculator 💰</h1>
 
